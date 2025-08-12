@@ -1,0 +1,824 @@
+noteid,note_type,note_text,main_diagnosis
+1,Discharge Summary,"Name: JOHNSON, ALEX                Unit No: 12345678
+Admission Date: 2024-03-15        Discharge Date: 2024-03-18
+Date of Birth: 1952-07-22        Sex: M
+Service: MEDICINE
+Allergies: NKDA
+Attending: Dr. Sarah Chen
+
+Chief Complaint:
+Cough and fever x4 days
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+72-year-old M w/ h/o COPD, DM2 p/w 4d productive cough, fever 101.5F, worsening SOB. Pt reports yellowish sputum, decreased PO intake. Denies CP, N/V. In ED: Temp 102.1, O2 sat 89% RA improved to 94% 2L NC. CXR showing RLL infiltrate.
+
+Past Medical History:
+1. COPD on home O2 2L
+2. DM2 on metformin, dx 2018
+3. HTN, well-controlled
+4. HLD
+
+Social History:
+Former smoker 30 pack-years, quit 2020. Lives alone at 123 Oak Street, Boston MA. Independent ADLs. Retired electrician.
+
+Physical Exam:
+ADMISSION:
+VS: 102.1 108/65 95 22 89%RA -> 94% 2L
+Gen: ill-appearing, mild resp distress
+HEENT: dry MM, no JVD
+CV: RRR no m/r/g
+Pulm: decreased BS RLL, crackles
+Abd: soft NTND +BS
+
+DISCHARGE:
+VS: 98.6 110/70 78 18 96%RA
+Gen: well-appearing, NAD
+Pulm: CTAB improved, good air movement
+
+Pertinent Results:
+03/15: WBC 12.5 Hgb 13.2 Plt 245
+03/15: Na 138 K 4.1 Cl 102 CO2 24 BUN 22 Cr 1.1 Glu 145
+03/18: WBC 8.9 Hgb 12.8
+
+CXR 03/15: RLL consolidation
+CXR 03/18: Improved consolidation
+
+Brief Hospital Course:
+72-year-old M w/ CAP admitted for IV abx. Started ceftriaxone 1g daily + azithromycin 500mg daily on 03/15. Clinically improved, afebrile >24h. O2 weaned to RA by 03/17. Discharged on PO azithromycin to complete 5d course.
+
+Medications on Admission:
+1. Metformin 1000mg PO BID
+2. Lisinopril 10mg PO daily
+3. Atorvastatin 20mg PO daily
+4. Albuterol HFA 2 puffs Q4H PRN
+5. Home O2 2L continuous
+
+Discharge Medications:
+1. Azithromycin 250mg PO daily x3 days
+2. Metformin 1000mg PO BID
+3. Lisinopril 10mg PO daily  
+4. Atorvastatin 20mg PO daily
+5. Albuterol HFA 2 puffs Q4H PRN
+6. Home O2 2L continuous
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Community-acquired pneumonia
+Secondary: COPD, DM2, HTN
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive  
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Complete azithromycin course through 03/21
+- Return to baseline home O2
+- Follow up Dr. Martinez (PCP) on 03/25
+- Return for fever, SOB, chest pain
+
+Followup Instructions:
+Dr. Maria Martinez (PCP) - 03/25/2024 at 2:00 PM
+Phone: (617) 555-0123",Community-Acquired Pneumonia
+2,Discharge Summary,"Name: WILLIAMS, SARAH JANE        Unit No: 87654321
+Admission Date: 2024-02-28        Discharge Date: 2024-03-02
+Date of Birth: 1966-11-14        Sex: F
+Service: CARDIOLOGY
+Allergies: NKDA
+Attending: Dr. Michael Thompson
+
+Chief Complaint:
+Chest pain
+
+Major Surgical or Invasive Procedure:
+Cardiac catheterization with PCI, DES to LAD on 2024-02-28
+
+History of Present Illness:
+58-year-old F w/ HTN, HLD p/w acute substernal CP 8/10 radiating to L arm at rest at 0600 on 02/28. Associated w/ diaphoresis, nausea. EKG showed STE V2-V4. Given ASA, plavix, heparin. Taken emergently to cath lab at 0730.
+
+Past Medical History:
+1. HTN, dx 2019
+2. HLD, dx 2021  
+3. Family h/o CAD (father MI age 55)
+
+Social History:
+Never smoker. Rare ETOH. Works as high school math teacher at Lincoln High School. Lives at 456 Elm Avenue, Cambridge MA 02138 with husband Robert Williams.
+
+Physical Exam:
+ADMISSION: 
+VS: 98.4 142/88 95 20 98%RA
+Gen: anxious, diaphoretic
+CV: tachy RRR no m/r/g
+Pulm: CTAB
+
+DISCHARGE:
+VS: 98.2 118/72 65 16 98%RA  
+Gen: well-appearing NAD
+CV: RRR no m/r/g
+Pulm: CTAB
+Ext: no edema, 2+ pulses
+
+Pertinent Results:
+02/28 0630: Trop I 0.05 
+02/28 1200: Trop I 45.2 
+03/01 0600: Trop I 12.1
+02/28: CK 89 -> CK 1250 -> CK 456 (03/01)
+02/29: Chol 245 LDL 162 HDL 38 TG 225
+03/01: Echo EF 45% mild anterior hypokinesis
+
+Cath 02/28: 95% prox LAD lesion, successful PCI w/ DES
+
+Brief Hospital Course:
+58-year-old F w/ STEMI presented to cath lab for emergent PCI. DES placed to LAD w/ excellent result. Post-cath course uncomplicated. Started on dual antiplatelet therapy, high-intensity statin, beta-blocker. Echo shows mild LV dysfunction EF 45%.
+
+Medications on Admission:
+1. Lisinopril 5mg PO daily
+2. Simvastatin 20mg PO daily
+
+Discharge Medications:
+1. Aspirin 81mg PO daily
+2. Clopidogrel 75mg PO daily 
+3. Metoprolol tartrate 25mg PO BID
+4. Atorvastatin 80mg PO daily
+5. Lisinopril 5mg PO daily
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: STEMI, s/p PCI w/ DES to LAD
+Secondary: HTN, HLD
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Take clopidogrel daily x12 months minimum - DO NOT STOP
+- Cardiac rehab referral provided
+- Low fat, low sodium diet
+- Return for CP, SOB, palpitations
+- Activity restrictions: no lifting >10 lbs x1 week
+
+Followup Instructions:
+Dr. James Rodriguez (Cardiology) - 03/09/2024 at 10:30 AM
+Cardiac Rehabilitation - 03/15/2024 at 9:00 AM
+Phone: (617) 555-0456",Acute Myocardial Infarction
+3,Discharge Summary,"Name: GARCIA, MIGUEL ANTONIO      Unit No: 11223344
+Admission Date: 2024-01-20        Discharge Date: 2024-01-23
+Date of Birth: 2000-03-08        Sex: M
+Service: MEDICINE
+Allergies: NKDA
+Attending: Dr. Patricia Kim
+
+Chief Complaint:
+N/V, altered mental status
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+24-year-old M w/ T1DM p/w 2d N/V, polyuria, polydipsia. Family reports pt non-adherent w/ insulin since 01/18. Found lethargic w/ Kussmaul respirations in ED. Initial BG 485, pH 7.18, anion gap 28. Mother states he ran out of insulin 3 days ago.
+
+Past Medical History:
+1. T1DM dx age 12 (2012)
+2. Prior DKA episodes x2 (2018, 2022)
+3. No diabetic complications
+
+Social History:
+College student at Boston University studying engineering. Lives in dorms at 789 Commonwealth Ave, Boston MA 02215. No tobacco/drugs. Rare ETOH. Parents: Carlos and Maria Garcia.
+
+Physical Exam:
+ADMISSION:
+VS: 99.2 110/70 110 28 99%RA
+Gen: lethargic, Kussmaul respirations
+HEENT: dry MM, fruity breath
+CV: tachy RRR
+Abd: soft diffusely tender
+
+DISCHARGE:
+VS: 98.8 125/78 88 18 99%RA
+Gen: alert, NAD
+HEENT: moist MM
+CV: RRR
+Abd: soft NTND
+
+Pertinent Results:
+01/20 0300: BG 485 pH 7.18 HCO3 8 AG 28 
+01/22 0600: BG 145 pH 7.38 HCO3 22 AG 12
+01/20: Beta-hydroxybutyrate 5.8 -> 0.3 (01/22)
+01/21: HbA1c 12.8%
+
+Brief Hospital Course:
+24-year-old M w/ DKA 2/2 insulin non-compliance. Admitted to ICU, treated w/ insulin gtt, IVF. AG closed by 01/22, transitioned to subcu insulin. Diabetes teaching provided re: compliance, sick day management. Social work consulted for financial assistance with insulin costs.
+
+Medications on Admission:
+1. Insulin glargine 18u qHS (not taking - ran out)
+2. Insulin lispro w/ meals (not taking - ran out)
+
+Discharge Medications:
+1. Insulin glargine 20u subcutaneous qHS
+2. Insulin lispro per sliding scale AC meals
+3. Glucose meter and strips
+4. Ketone testing strips
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Diabetic ketoacidosis
+Secondary: Type 1 diabetes mellitus, poorly controlled
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Check BG QID and log results
+- NEVER stop insulin even when sick
+- Call for BG >300 or ketones
+- Financial assistance provided for insulin costs
+- Return to college when feeling 100%
+
+Followup Instructions:
+Dr. Lisa Chen (Endocrinology) - 01/30/2024 at 2:15 PM
+Diabetes Educator - 01/26/2024 at 10:00 AM
+Phone: (617) 555-0789",Diabetic Ketoacidosis
+4,Discharge Summary,"Name: BROWN, DOROTHY MAE          Unit No: 55667788
+Admission Date: 2024-04-12        Discharge Date: 2024-04-16
+Date of Birth: 1956-09-03        Sex: F  
+Service: MEDICINE
+Allergies: PCN -> rash
+Attending: Dr. Robert Chang
+
+Chief Complaint:
+Increased SOB and cough
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+68-year-old F w/ severe COPD (FEV1 35%) on home O2 2L p/w 3d worsening dyspnea, increased sputum production (yellow-green), decreased exercise tolerance. Reports increased albuterol use without improvement. No fever. Lives alone at 321 Pine Street, Somerville MA 02144.
+
+Past Medical History:
+1. COPD severe, Gold Stage III, on home O2
+2. Former smoker 45 pack-years, quit 2019 
+3. OSA on CPAP
+4. Depression, stable on sertraline
+
+Social History:
+Retired seamstress. Lives w/ daughter Nancy Brown at same address. Former smoker quit 5y ago. Widow, husband died 2020. Has home health aide 3x/week.
+
+Physical Exam:
+ADMISSION:
+VS: 98.8 145/92 102 26 88%RA -> 92% 4L
+Gen: sitting upright, accessory muscle use
+Pulm: diminished BS, exp wheeze, prolonged exp
+CV: distant heart sounds
+
+DISCHARGE:
+VS: 98.4 135/85 92 20 94% 2L NC
+Gen: comfortable, mild SOB
+Pulm: diminished BS, improved wheeze
+
+Pertinent Results:
+04/12: WBC 11.2 w/ left shift
+04/13: pH 7.35 pCO2 55 pO2 68 on 2L
+04/12: CXR hyperinflation, no infiltrates
+04/15: CXR improved hyperinflation
+
+Brief Hospital Course:
+68-year-old F w/ COPD exacerbation treated w/ systemic steroids, nebs, azithromycin. O2 requirement decreased from 4L to 2L. Pulm rehab consult provided. Baseline O2 requirement 2L continuous.
+
+Medications on Admission:
+1. Tiotropium 18mcg daily
+2. Fluticasone/salmeterol 250/50 BID  
+3. Albuterol PRN
+4. Home O2 2L continuous
+5. Sertraline 50mg daily
+
+Discharge Medications:
+1. Prednisone 40mg PO daily x5d
+2. Azithromycin 250mg PO daily x5d
+3. Tiotropium 18mcg inhaled daily
+4. Albuterol/ipratropium neb Q6H x1 week
+5. Fluticasone/salmeterol 250/50mcg BID
+6. Home O2 2L continuous
+7. Sertraline 50mg daily
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Acute exacerbation chronic obstructive pulmonary disease
+Secondary: OSA, depression
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory with assistance
+
+Discharge Instructions:
+- Continue home O2 2L continuous
+- Pulmonary rehab enrollment scheduled
+- Smoking cessation counseling reinforced
+- Return for worsening SOB, fever
+- Daughter Nancy to assist with medications
+
+Followup Instructions:
+Dr. Jennifer Park (Pulmonology) - 04/26/2024 at 1:30 PM
+Pulmonary Rehabilitation - 05/03/2024 at 9:00 AM
+Phone: (617) 555-0987",COPD Exacerbation
+5,Discharge Summary,"Name: ANDERSON, FRANK WILLIAM     Unit No: 99887766
+Admission Date: 2024-05-08        Discharge Date: 2024-05-12
+Date of Birth: 1949-12-25        Sex: M
+Service: SURGERY
+Allergies: NKDA
+Attending: Dr. Amanda Foster
+
+Chief Complaint:
+RUQ pain and fever
+
+Major Surgical or Invasive Procedure:
+ERCP w/ sphincterotomy and stone extraction on 2024-05-09
+
+History of Present Illness:
+75-year-old M w/ h/o cholelithiasis p/w acute RUQ pain, fever 102.8F, jaundice x1d starting 05/07. Pain radiates to R shoulder. Associated w/ N/V, decreased appetite. Presents w/ Charcot's triad. Wife reports yellow eyes since morning.
+
+Past Medical History:
+1. Cholelithiasis, dx 2022
+2. HTN, well-controlled
+3. BPH, stable
+
+Social History:
+Retired plumber. Lives at 654 Maple Drive, Newton MA 02458 with wife Helen Anderson (married 48 years). No tobacco/ETOH. Has 3 adult children.
+
+Physical Exam:
+ADMISSION:
+VS: 102.8 95/60 108 22 97%RA
+Gen: ill-appearing, jaundiced
+HEENT: scleral icterus
+Abd: RUQ tenderness, +Murphy's sign
+Ext: no edema
+
+DISCHARGE:
+VS: 98.6 128/76 78 16 97%RA
+Gen: well-appearing, NAD
+HEENT: scleral icterus resolved
+Abd: soft, mild RUQ tenderness
+
+Pertinent Results:
+05/08 1800: T bili 8.5 D bili 6.2 ALT 285 AST 195 Alk phos 445
+05/11 0600: T bili 2.1 D bili 1.4 ALT 89 AST 72 Alk phos 189
+05/08: WBC 18.5 -> WBC 9.2 (05/11)
+05/09: Blood cx: E.coli sensitive to ceftriaxone
+
+ERCP 05/09: choledocholithiasis w/ multiple stones (7mm, 5mm, 3mm), successful sphincterotomy and extraction
+
+Brief Hospital Course:
+75-year-old M w/ acute cholangitis underwent emergent ERCP revealing choledocholithiasis. Successful sphincterotomy and stone extraction. Treated w/ IV ceftriaxone for cholangitis. LFTs trending down appropriately. Surgery consulted re: elective cholecystectomy in 6-8 weeks.
+
+Medications on Admission:
+1. Lisinopril 10mg daily
+2. Tamsulosin 0.4mg daily
+3. Aspirin 81mg daily
+
+Discharge Medications:
+1. Ciprofloxacin 500mg PO BID x7d
+2. Ursodiol 300mg PO BID  
+3. Omeprazole 20mg PO daily
+4. Lisinopril 10mg daily
+5. Tamsulosin 0.4mg daily
+6. Aspirin 81mg daily
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Acute cholangitis, choledocholithiasis s/p ERCP
+Secondary: Cholelithiasis, HTN, BPH
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive  
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Clear liquids today, advance diet as tolerated
+- Complete antibiotic course through 05/19
+- Surgery f/u for cholecystectomy discussion
+- Return for fever, abd pain, jaundice
+- Wife Helen to monitor for symptoms
+
+Followup Instructions:
+Dr. Mark Sullivan (Surgery) - 05/22/2024 at 11:15 AM
+Phone: (617) 555-1234",Acute Cholangitis
+6,Discharge Summary,"Name: THOMPSON, BETTY LOUISE      Unit No: 44556677
+Admission Date: 2024-06-05        Discharge Date: 2024-06-09
+Date of Birth: 1942-08-17        Sex: F
+Service: MEDICINE  
+Allergies: NKDA
+Attending: Dr. David Wong
+
+Chief Complaint:
+Decreased UOP and leg swelling
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+82-year-old F w/ CHF EF 35%, CKD stage 3 p/w 5d decreased UOP, bilateral LE edema, SOB. Reports med non-compliance and increased salt intake over past week. Weight up 8 lbs from baseline (from 145 to 153 lbs). Lives at Sunset Manor Assisted Living, 890 Oak Avenue, Brookline MA 02446.
+
+Past Medical History:
+1. CKD stage 3 (baseline Cr 1.4)
+2. CHF EF 35%, dx 2021
+3. DM2, dx 2015
+4. HTN, dx 2008
+
+Social History:
+Retired elementary school teacher. Widowed 2019. Lives at assisted living facility. Has visiting nurse 2x/week. Daughter visits weekly. No tobacco/ETOH.
+
+Physical Exam:
+ADMISSION:
+VS: 98.4 165/95 105 24 92%RA
+Gen: mild resp distress
+CV: RRR S3 gallop, JVP 12cm
+Pulm: bibasilar crackles
+Ext: 3+ pitting edema bilateral LE
+
+DISCHARGE:
+VS: 98.1 142/88 68 18 96%RA
+Gen: comfortable, NAD
+CV: RRR, JVP 8cm
+Pulm: clear bases
+Ext: 1+ pitting edema bilateral LE
+
+Pertinent Results:
+06/05 0600: Cr 3.2 BUN 85 K 5.8 
+06/08 0600: Cr 1.8 BUN 45 K 4.2
+06/06: Echo: EF 35% no change from prior
+06/05: BNP 1250 -> BNP 456 (06/08)
+
+Brief Hospital Course:
+82-year-old F w/ acute on chronic kidney injury in setting of CHF exacerbation. Treated w/ gentle diuresis and fluid restriction. Cr improved w/ optimization of volume status. Cardiology consulted for CHF management. VNA services arranged.
+
+Medications on Admission:
+1. Furosemide 20mg daily (not taking regularly)
+2. Carvedilol 3.125mg BID
+3. Lisinopril 10mg daily (held due to AKI)
+4. Insulin glargine 15u daily
+
+Discharge Medications:
+1. Furosemide 40mg PO daily
+2. Carvedilol 6.25mg PO BID
+3. Lisinopril 5mg PO daily (reduced dose)
+4. Insulin glargine 15u subcutaneous daily
+5. Potassium chloride 20mEq PO daily
+
+Discharge Disposition: Home (Assisted Living) w/ VNA
+
+Discharge Diagnosis:
+Primary: Acute on chronic kidney injury, CHF exacerbation
+Secondary: DM2, HTN
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Daily weights, call if gain >3 lbs
+- Fluid restriction 2L daily  
+- Low sodium diet <2g daily
+- VNA for med compliance, weights
+- Assisted living staff to monitor daily weights
+
+Followup Instructions:
+Dr. Rachel Stone (Nephrology) - 06/16/2024 at 10:00 AM
+Dr. Kevin Murphy (Cardiology) - 06/20/2024 at 2:30 PM
+Phone: (617) 555-2468",Acute Kidney Injury
+7,Discharge Summary,"Name: MARTINEZ, CARLOS JOSÉ      Unit No: 33445566  
+Admission Date: 2024-07-14        Discharge Date: 2024-07-17
+Date of Birth: 1979-05-30        Sex: M
+Service: MEDICINE
+Allergies: NKDA
+Attending: Dr. Linda Rodriguez
+
+Chief Complaint:
+Right leg redness and swelling
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+45-year-old M w/ DM2, PVD p/w 3d R LE redness, warmth, swelling. Reports minor trauma to leg 1 wk ago while working construction. Area progressively worsened w/ spreading erythema and tenderness. No drainage or ulceration. Lives at 147 Beacon Street, Chelsea MA 02150.
+
+Past Medical History:
+1. DM2 poorly controlled, dx 2015
+2. PVD, dx 2020  
+3. Obesity BMI 38
+4. HTN, dx 2018
+
+Social History:
+Works construction for Sullivan Brothers Construction. Smoker 1ppd x20y. Married to Rosa Martinez, has 2 teenage children. Drinks beer on weekends.
+
+Physical Exam:
+ADMISSION:
+VS: 101.2 148/92 95 18 98%RA
+Gen: well-appearing Hispanic male
+Ext: R LE erythema from ankle to mid-calf, warm, tender, well-demarcated borders
+
+DISCHARGE:  
+VS: 98.2 135/82 88 16 98%RA
+Gen: well-appearing, NAD
+Ext: R LE resolving erythema and edema, no drainage
+
+Pertinent Results:
+07/14: WBC 14.8 Hgb 12.1 Plt 387
+07/17: WBC 8.5 Hgb 11.8
+07/14: Glu 285 -> Glu 145 (07/17) HbA1c 9.8%
+07/14: Blood cx: no growth x48 hours
+
+Brief Hospital Course:
+45-year-old M w/ R LE cellulitis treated w/ IV clindamycin. Marked improvement in erythema and swelling. DM management optimized during hospitalization. Endocrine consulted for diabetes management. Smoking cessation counseling provided.
+
+Medications on Admission:
+1. Metformin 500mg BID
+2. Glipizide 5mg daily
+3. Lisinopril 10mg daily
+
+Discharge Medications:
+1. Clindamycin 300mg PO QID x10d
+2. Metformin 1000mg PO BID  
+3. Insulin glargine 25u subcutaneous daily
+4. Insulin lispro per sliding scale
+5. Lisinopril 10mg daily
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Cellulitis, right lower extremity
+Secondary: Diabetes mellitus type 2, uncontrolled
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- Complete antibiotic course through 07/27
+- Elevate R leg when sitting
+- Return for worsening redness, fever, red streaking
+- Smoking cessation counseling provided
+- Work restrictions: light duty x1 week
+
+Followup Instructions:
+Dr. Maria Gonzalez (PCP) - 07/24/2024 at 3:00 PM
+Dr. Thomas Lee (Endocrinology) - 08/05/2024 at 1:45 PM
+Phone: (617) 555-3579",Cellulitis
+8,Discharge Summary,"Name: DAVIS, ROBERT EUGENE       Unit No: 22334455
+Admission Date: 2024-08-22        Discharge Date: 2024-08-25
+Date of Birth: 1961-04-12        Sex: M
+Service: GASTROENTEROLOGY
+Allergies: NKDA
+Attending: Dr. Susan Kim
+
+Chief Complaint:
+Black tarry stools
+
+Major Surgical or Invasive Procedure:
+EGD w/ thermal therapy to bleeding duodenal ulcer on 2024-08-23
+
+History of Present Illness:
+63-year-old M w/ h/o PUD p/w 2d melena and fatigue. Reports taking ibuprofen 800mg TID for back pain x2 weeks after lifting injury at work. Denies hematemesis, abd pain, dizziness. No recent NSAIDs other than ibuprofen. Works as warehouse manager.
+
+Past Medical History:
+1. PUD, dx 2019 after H.pylori treatment
+2. Chronic back pain, L4-L5 disc disease
+3. HTN, well-controlled
+
+Social History:
+Retired warehouse manager. Lives at 258 Highland Road, Medford MA 02155 with wife Janet Davis. Social ETOH (2-3 beers/week). No tobacco. Has 2 adult sons.
+
+Physical Exam:
+ADMISSION:
+VS: 98.8 110/65 98 18 98%RA
+Gen: pale, fatigued but alert
+HEENT: pale conjunctiva
+Abd: soft NTND +BS
+Rectal: melena, guaiac positive
+
+DISCHARGE:
+VS: 98.4 125/75 72 16 98%RA
+Gen: well-appearing, NAD
+Abd: soft NTND +BS
+Rectal: guaiac negative
+
+Pertinent Results:
+08/22 1800: Hgb 7.8 Hct 24% Plt 245
+08/24 0600: Hgb 10.2 Hct 31% (post-2u PRBC)
+08/22: BUN/Cr 45/1.2 -> BUN/Cr 25/1.1 (08/24)
+
+EGD 08/23: 1.5cm duodenal ulcer w/ visible vessel, thermal therapy applied, H.pylori negative
+
+Brief Hospital Course:
+63-year-old M w/ UGIB 2/2 duodenal ulcer. Received 2u PRBC for acute blood loss anemia. EGD showed bleeding duodenal ulcer treated w/ thermal therapy. Started high-dose PPI. H.pylori negative. Counseled extensively on NSAID avoidance.
+
+Medications on Admission:
+1. Ibuprofen 800mg TID (STOPPED)
+2. Lisinopril 10mg daily
+3. Aspirin 81mg daily (HELD)
+
+Discharge Medications:
+1. Omeprazole 40mg PO BID x8 weeks
+2. Sucralfate 1g PO QID x4 weeks
+3. Iron sulfate 325mg PO daily
+4. Acetaminophen 650mg PO Q6H PRN pain
+5. Lisinopril 10mg daily
+
+Discharge Disposition: Home
+
+Discharge Diagnosis:
+Primary: Upper GI bleeding 2/2 duodenal ulcer, acute blood loss anemia
+Secondary: HTN, chronic back pain
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory - independent
+
+Discharge Instructions:
+- AVOID ALL NSAIDs permanently (ibuprofen, naproxen, etc.)
+- Repeat EGD in 6-8 weeks (scheduled)
+- Return for black stools, vomiting blood, dizziness
+- Use acetaminophen for pain only
+- Physical therapy referral for back pain
+
+Followup Instructions:
+Dr. Andrew Peterson (GI) - 09/05/2024 at 2:15 PM
+Repeat EGD - 10/18/2024 at 11:00 AM
+Phone: (617) 555-4680",Upper GI Bleed
+9,Discharge Summary,"Name: TAYLOR, MARGARET ANNE      Unit No: 11223355
+Admission Date: 2024-09-10        Discharge Date: 2024-09-15
+Date of Birth: 1953-06-28        Sex: F
+Service: NEUROLOGY
+Allergies: NKDA
+Attending: Dr. Christopher Lee
+
+Chief Complaint:
+Left-sided weakness and slurred speech
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+71-year-old F w/ Afib (not on anticoag due to fall risk) p/w acute L-sided weakness and dysarthria. Symptoms began 0800 on 09/10, found by husband at 1000. NIHSS 8 on arrival at 1045. Outside window for tPA. Last seen normal 2200 on 09/09.
+
+Past Medical History:
+1. Afib (not on anticoagulation due to fall risk)
+2. HTN, dx 2008
+3. HLD, dx 2012  
+4. Prior TIA 2022, resolved completely
+
+Social History:
+Retired high school English teacher. Lives at 492 Riverside Drive, Watertown MA 02472 with husband William Taylor. No tobacco/drugs. Social wine with dinner. Has 3 adult children nearby.
+
+Physical Exam:
+ADMISSION:
+VS: 99.1 165/100 85 irr 18 97%RA
+Gen: alert, anxious
+Neuro: L facial droop, L arm 2/5, L leg 3/5, dysarthria
+CV: irreg irreg, no murmur
+
+DISCHARGE:
+VS: 98.6 145/90 78 irr 16 97%RA
+Gen: alert, comfortable
+Neuro: L facial droop improved, L arm 4/5, L leg 4+/5, dysarthria mild
+CV: irreg irreg
+
+Pertinent Results:
+09/10: CT head: no acute hemorrhage
+09/11: MRI: acute R MCA stroke, 15mm x 12mm
+09/11: Echo: Afib, EF 55%, no thrombus seen
+09/12: Carotid US: <50% stenosis bilaterally
+
+Brief Hospital Course:
+71-year-old F w/ acute ischemic stroke R MCA territory. Managed w/ ASA, statin, BP control. Neurology consulted daily. Started anticoag for 2° stroke prevention after discussing risks/benefits with family. PT/OT evaluated. Mild residual L-sided weakness.
+
+Medications on Admission:
+1. Metoprolol 50mg BID
+2. Lisinopril 5mg daily
+3. Simvastatin 20mg daily
+
+Discharge Medications:
+1. Warfarin 5mg PO daily
+2. Aspirin 81mg PO daily x30d then stop
+3. Atorvastatin 80mg PO daily
+4. Metoprolol tartrate 50mg PO BID
+5. Lisinopril 10mg PO daily
+
+Discharge Disposition: Home w/ home health services
+
+Discharge Diagnosis:
+Primary: Acute ischemic stroke, R MCA territory
+Secondary: Atrial fibrillation, HTN, HLD
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory w/ assistance (uses cane)
+
+Discharge Instructions:
+- INR check 09/18, goal 2-3
+- PT 3x weekly at home
+- Return for new weakness, speech changes, severe HA
+- Stroke education provided to patient and husband
+- Fall precautions at home
+
+Followup Instructions:
+Dr. Emily Zhang (Neurology) - 09/25/2024 at 1:30 PM
+INR clinic - 09/18/2024 at 9:00 AM
+Phone: (617) 555-7890",Ischemic Stroke
+10,Discharge Summary,"Name: WILSON, DOROTHY HELEN      Unit No: 66778899
+Admission Date: 2024-10-03        Discharge Date: 2024-10-08
+Date of Birth: 1940-02-14        Sex: F
+Service: ORTHOPEDIC SURGERY
+Allergies: NKDA
+Attending: Dr. Michael Johnson
+
+Chief Complaint:
+Right hip pain s/p fall
+
+Major Surgical or Invasive Procedure:
+ORIF right femoral neck fracture on 2024-10-04
+
+History of Present Illness:
+84-year-old F w/ osteoporosis p/w R hip pain after mechanical fall at home on 10/03 at 0800. Unable to bear weight. XR showed displaced femoral neck fracture. Good functional status prior to fall, lives independently at 123 Sunset Boulevard, Brighton MA 02135. Fall occurred getting out of bed.
+
+Past Medical History:
+1. Osteoporosis, dx 2018
+2. HTN, well-controlled
+3. Mild cognitive impairment
+4. H/o falls x2 in past year
+
+Social History:
+Widowed 2020, lives alone in single-family home. Daughter Karen Wilson lives 2 miles away, visits daily. No tobacco/ETOH. Former librarian. Independent with ADLs prior to fall.
+
+Physical Exam:
+ADMISSION:
+VS: 98.8 155/85 88 16 96%RA
+Gen: elderly female in pain, alert
+Ext: R hip shortened, externally rotated
+Neuro: A&O x2 (person, place)
+
+DISCHARGE:
+VS: 98.4 138/78 68 16 96%RA
+Gen: comfortable, A&O x3
+Ext: R hip surgical site clean, dry, intact, minimal pain
+Neuro: strength 5/5 bilateral UE
+
+Pertinent Results:
+10/03: Hgb 10.8 -> Hgb 9.2 (post-op 10/05)
+10/06: XR hip: appropriate hardware placement, good alignment, no complications
+
+Brief Hospital Course:
+84-year-old F s/p uncomplicated ORIF R femoral neck fracture on 10/04. Post-op course notable for mild delirium on POD#1 which resolved by POD#2. PT cleared for WBAT w/ walker on POD#3. Geriatrics consulted for fall risk assessment and cognitive evaluation.
+
+Medications on Admission:
+1. Amlodipine 5mg daily
+2. Calcium carbonate 500mg BID
+3. Vitamin D3 1000u daily
+
+Discharge Medications:
+1. Oxycodone 5mg PO Q4H PRN pain
+2. Acetaminophen 650mg PO Q6H
+3. Docusate 100mg PO BID
+4. Calcium carbonate 1200mg PO daily
+5. Vitamin D3 2000u PO daily
+6. Amlodipine 5mg daily
+
+Discharge Disposition: Skilled nursing facility (Sunshine Manor)
+
+Discharge Diagnosis:
+Primary: R femoral neck fracture s/p ORIF
+Secondary: Osteoporosis, mild cognitive impairment
+
+Discharge Condition:
+Mental Status: Clear and coherent
+Level of Consciousness: Alert and interactive
+Activity Status: Ambulatory w/ walker, WBAT
+
+Discharge Instructions:
+- WBAT R leg w/ walker
+- PT daily at SNF for 2-4 weeks
+- Fall risk assessment completed
+- Return for increased pain, swelling, drainage from incision
+- Daughter Karen is primary contact
+
+Followup Instructions:
+Dr. Michael Johnson (Orthopedic Surgery) - 10/22/2024 at 9:30 AM
+Physical Therapy evaluation at SNF
+Phone: (617) 555-9012
+Skilled Nursing Facility: Sunshine Manor, 456 Care Lane, Brighton MA 02135",Hip Fracture Post-ORIF
