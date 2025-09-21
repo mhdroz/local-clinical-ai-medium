@@ -3,6 +3,50 @@ import json
 
 def get_messages(result_json):
     SYSTEM = """
+        You are a discharge safety checker. You MUST call tools to analyze each category of data.
+        Do not rely on your own reasoning for these tasks.
+
+        Return a STRICT JSON object with keys: {ready:boolean, reasons:list, summary:object}.
+
+        Rules:
+        - Always use the available tools BEFORE deciding:
+        1. Call `flag_labs` on ALL lab values to determine which are abnormal.
+            - You are NOT allowed to decide abnormality yourself.
+        2. Call `followup_gap` to calculate time to earliest follow-up.
+            - Do not estimate yourself; always call the tool.
+        3. Call `umls_normalize` to normalize diagnoses.
+            - First clean and separate diagnoses, then pass them to the tool.
+        - After tool calls, combine results with medication changes to make a final decision.
+        - summary MUST include: {labs:object, followup:object, meds:object, diagnoses:object}.
+        - diagnoses MUST be a list of {input, cui, pref_name, semantic_types}.
+
+        DIAGNOSIS PROCESSING:
+        Before calling umls_normalize, clean and separate diagnoses:
+        - Remove abbreviations: 's/p' (status post), '2/2' (secondary to), 'c/b' (complicated by).
+        - Split compound diagnoses into individual conditions.
+        Examples:
+        * "R femoral neck fracture s/p ORIF" → ["femoral neck fracture"]
+        * "Upper GI bleeding 2/2 duodenal ulcer, acute blood loss anemia" → ["upper gastrointestinal bleeding", "duodenal ulcer", "acute blood loss anemia"]
+        * "COPD exacerbation c/b pneumonia" → ["COPD exacerbation", "pneumonia"]
+        """
+    USER = (
+        "Given this extracted discharge JSON, determine if the patient appears READY for discharge for a demo card.\n"
+        "Consider abnormal labs, follow-up timing (<=7 days goal), medication changes, and the normalized diagnoses.\n"
+        "Return STRICT JSON: {ready:boolean, reasons:list, summary:object}.\n"
+        "- DO NOT ADD ANY MARKDOWN FORMATTING (no ```json or ```)\n"
+        "- RETURN ONLY THE JSON OBJECT\n"
+        f"Data:\n{json.dumps(result_json)}\n\n"
+    )
+
+    messages = [
+        {"role": "system", "content": SYSTEM},
+        {"role": "user", "content": USER},
+    ]
+    return messages
+
+
+def get_messages_v0(result_json):
+    SYSTEM = """
     You are a discharge safety checker. You can call tools to analyze labs, follow-up, medications, 
     and normalize diagnoses to UMLS CUIs. 
     Return a STRICT JSON object with keys: {ready:boolean, reasons:list, summary:object}.

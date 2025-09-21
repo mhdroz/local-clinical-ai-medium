@@ -19,41 +19,44 @@ def chat(payload):
     return r.json()
 
 
-def check_discharge_safety(messages):
-    for _ in range(5):  # safety cap
+def check_discharge_safety(messages, chat, MODEL, TOOLS, tool_runner=None, max_iters=5):
+    """
+    tool_runner: optional callable (name:str, args:dict) -> result:dict
+                 Used for evaluation (logging/latency). If None, calls the functions directly.
+    """
+    final = ""
+    for _ in range(max_iters):
         resp = chat(
             {"model": MODEL, "messages": messages, "tools": TOOLS, "stream": False}
         )
         msg = resp.get("message", {})
         tool_calls = msg.get("tool_calls") or []
-        # If the model asked to call tools, run them and send tool results
         if tool_calls:
-            # include the assistant message that requested tools
             messages.append(
                 {
                     "role": "assistant",
-                    "content": msg.get("content", ""),
+                    "content": msg.get("content", "") or "",
                     "tool_calls": tool_calls,
                 }
             )
             for call in tool_calls:
-                print(call)
                 fn = call["function"]["name"]
                 args = call["function"].get("arguments") or {}
-                if fn == "flag_labs":
-                    result = flag_labs(**args)
-                elif fn == "followup_gap":
-                    result = followup_gap(**args)
-                elif fn == "umls_normalize":
-                    result = normalize_terms_to_cui(**args)
+                if tool_runner is not None:
+                    result = tool_runner(fn, args)  # <-- evaluation hook
                 else:
-                    result = {"error": f"unknown tool {fn}"}
+                    if fn == "flag_labs":
+                        result = flag_labs(**args)
+                    elif fn == "followup_gap":
+                        result = followup_gap(**args)
+                    elif fn == "umls_normalize":
+                        result = normalize_terms_to_cui(**args)
+                    else:
+                        result = {"error": f"unknown tool {fn}"}
                 messages.append(
                     {"role": "tool", "name": fn, "content": json.dumps(result)}
                 )
             continue
-        # Otherwise, we should have the final answer
         final = (msg.get("content") or "").strip()
-        print(final)
         break
     return final
