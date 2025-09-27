@@ -7,6 +7,7 @@ Testing local healthcare AI workflows with OpenAI’s open-weight models — fro
 This repository builds on my blog posts:
 -  [I Ran OpenAI’s New Open Model on My Laptop to Extract Medical Data — Here’s What Happened](https://medium.com/towards-artificial-intelligence/i-ran-openais-new-open-model-on-my-laptop-to-extract-medical-data-here-s-what-happened-aeb6acddfede)
 -  [I Built a Local Clinical AI Agent from Scratch - Here's How](https://medium.com/towards-artificial-intelligence/i-built-a-local-clinical-ai-agent-from-scratch-heres-how-90783c59afdc)
+-  [Do AI Agents Really Use the Tools You Build for Them? I Tested It.](https://medium.com/towards-artificial-intelligence/i-built-a-clinical-ai-agent-and-it-skipped-the-tools-i-gave-it-d9d7c3d25051)
 
 It contains:
 
@@ -16,6 +17,7 @@ It contains:
   - Follow-up gap checks
   - Diagnosis normalization (UMLS / demo lexicon)
 3. End-to-end workflow → from text note ➝ structured JSON ➝ readiness decision
+4. Tool use evaluation framework
 
 All notes are synthetic, no real patient data.
 
