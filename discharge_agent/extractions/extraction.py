@@ -1,5 +1,6 @@
 import requests, json
 from discharge_agent.extractions.prompts import system_prompt, get_user_prompt
+from discharge_agent.llm.llm_utils import MedicalDataExtractor
 import os
 from dotenv import load_dotenv
 
@@ -22,12 +23,15 @@ def extract_clinical_information(note):
     return r.json()["message"]["content"]
 
 
-def run_extraction_with_json_evaluation(df, text_col="note_text", max_retries=3):
+def run_extraction_with_json_evaluation(
+    df, extractor: MedicalDataExtractor, text_col="note_text", max_retries=3
+):
     """
     Run extraction on a dataframe of notes and evaluate JSON validity.
 
     Args:
         df: pandas DataFrame with a column of note text
+        extractor: MedicalDataExtractor instance (local, openai, or anthropic)
         text_col: name of the column containing note text
         max_retries: number of times to retry if JSON parsing fails
 
@@ -45,7 +49,7 @@ def run_extraction_with_json_evaluation(df, text_col="note_text", max_retries=3)
         success = False
 
         for attempt in range(max_retries):
-            result = extract_clinical_information(note)
+            result = extractor.extract_clinical_information(note)
             try:
                 result_json = json.loads(result)
                 results.append(result_json)
@@ -63,9 +67,10 @@ def run_extraction_with_json_evaluation(df, text_col="note_text", max_retries=3)
         "valid": n_valid,
         "invalid": n_invalid,
         "success_rate": round(100.0 * n_valid / n_total, 1),
+        "provider": extractor.provider.value,
     }
 
-    print("\n=== Extraction Evaluation ===")
+    print(f"\n=== {extractor.provider.value.upper()} Extraction Evaluation ===")
     print(f"Processed: {n_total}")
     print(f"Valid JSON: {n_valid}")
     print(f"Invalid JSON (after retries): {n_invalid}")
