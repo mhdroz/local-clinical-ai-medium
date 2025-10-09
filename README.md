@@ -8,6 +8,7 @@ This repository builds on my blog posts:
 -  [I Ran OpenAI’s New Open Model on My Laptop to Extract Medical Data — Here’s What Happened](https://medium.com/towards-artificial-intelligence/i-ran-openais-new-open-model-on-my-laptop-to-extract-medical-data-here-s-what-happened-aeb6acddfede)
 -  [I Built a Local Clinical AI Agent from Scratch - Here's How](https://medium.com/towards-artificial-intelligence/i-built-a-local-clinical-ai-agent-from-scratch-heres-how-90783c59afdc)
 -  [Do AI Agents Really Use the Tools You Build for Them? I Tested It.](https://medium.com/towards-artificial-intelligence/i-built-a-clinical-ai-agent-and-it-skipped-the-tools-i-gave-it-d9d7c3d25051)
+-  [Can Local AI Keep Up with the Cloud? I Tested 8 Models on Clinical Data](https://medium.com/towards-artificial-intelligence/can-local-ai-keep-up-with-the-cloud-i-tested-8-models-on-clinical-data-739e23b71a65)
 
 It contains:
 
@@ -18,6 +19,7 @@ It contains:
   - Diagnosis normalization (UMLS / demo lexicon)
 3. End-to-end workflow → from text note ➝ structured JSON ➝ readiness decision
 4. Tool use evaluation framework
+5. Simple benchmark framework to compare the extraction quality between various LLMs
 
 All notes are synthetic, no real patient data.
 
@@ -28,7 +30,9 @@ All notes are synthetic, no real patient data.
 - `discharge_agent/llm` — prompt templates and tools specs
 - `discharge_agent/pieplines` - orchestration code
 - `discharge_agent/tools` - labs, date reasoning, UMLS normalization
+- `discharge_agent/evaluation` - benchmark code
 - `discharge_agent_example.ipynb` - end to end example
+- `extraction_benchmark.ipynb` - end to end benchmark
 
 ## Quickstart
 use the `.env_template` to create your own `.env` with your UMLS API key or leave it empty to use the provided demo mappings
