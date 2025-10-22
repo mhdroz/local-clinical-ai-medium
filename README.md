@@ -65,3 +65,5 @@ Contributions welcome — whether it’s:
 ## Questions or feedback?
 
 Let’s connect on [LinkedIn](https://www.linkedin.com/in/marie-humbert-droz/)
+
+Interested in collaborating or working on a healthcare AI project? [Visit my website](https://www.mhd-ai.com/) to get in touch or book a call.
