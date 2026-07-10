@@ -43,8 +43,52 @@ def mrn_recognizer() -> PatternRecognizer:
     )
 
 
-def build_analyzer() -> AnalyzerEngine:
-    """AnalyzerEngine with spaCy en_core_web_lg + the custom MRN recognizer."""
+def header_name_recognizer() -> PatternRecognizer:
+    """Names in the structured header ('Name: JOHNSON, ALEX').
+
+    Experiment A found spaCy NER misses all-caps header names entirely some of
+    the time (worse when the surname is a medical eponym like PARKINSON) — but
+    the note template makes them trivially matchable. This is the Phase 4C
+    'custom recognizer' fix: lean on document structure where NER is weak.
+    """
+    return PatternRecognizer(
+        supported_entity="PERSON",
+        name="header_name_recognizer",
+        patterns=[
+            Pattern(
+                name="name_header",
+                regex=r"(?<=Name: )[A-ZÀ-Þ][A-ZÀ-Þ'\-]+,\s*[A-ZÀ-Þ][A-ZÀ-Þ'\-]+(?: [A-ZÀ-Þ][A-ZÀ-Þ'\-]+)*",
+                score=0.9,
+            )
+        ],
+    )
+
+
+def md_date_recognizer() -> PatternRecognizer:
+    """Bare month/day dates ('03/15:' lab lines) that spaCy's DATE_TIME misses.
+
+    Month is range-constrained so blood pressures ('95/60') don't match;
+    pain scores ('8/10') and strength ('4/5') still can — the policy's benign
+    filters drop those denominators. Ambiguity is inherent and documented.
+    """
+    return PatternRecognizer(
+        supported_entity="DATE_TIME",
+        name="md_date_recognizer",
+        patterns=[
+            Pattern(
+                name="bare_month_day",
+                regex=r"\b(?:0?[1-9]|1[0-2])/(?:[0-2]?[0-9]|3[01])\b(?!/)",
+                score=0.6,
+            )
+        ],
+    )
+
+
+def build_analyzer(extended: bool = False) -> AnalyzerEngine:
+    """AnalyzerEngine with spaCy en_core_web_lg + the custom MRN recognizer.
+
+    extended=True adds the Phase 4C structural recognizers (header names,
+    bare m/d dates) — used by redaction policy v2."""
     from presidio_analyzer.nlp_engine import NlpEngineProvider
 
     provider = NlpEngineProvider(
@@ -55,4 +99,7 @@ def build_analyzer() -> AnalyzerEngine:
     )
     analyzer = AnalyzerEngine(nlp_engine=provider.create_engine())
     analyzer.registry.add_recognizer(mrn_recognizer())
+    if extended:
+        analyzer.registry.add_recognizer(header_name_recognizer())
+        analyzer.registry.add_recognizer(md_date_recognizer())
     return analyzer

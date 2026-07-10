@@ -34,15 +34,25 @@ _clients = {}
 
 def get_langfuse(redaction: bool = False) -> Langfuse:
     """One client per redaction mode. The mask callback is the redaction
-    boundary: with redaction on, unmasked PHI never reaches the exporter."""
-    key = "on" if redaction else "off"
+    boundary: with redaction on, unmasked PHI never reaches the exporter.
+
+    REDACTION_POLICY=v2 in the environment switches the masker to the Phase 4C
+    policy (clinical allowlist, benign-date filters, structural recognizers,
+    date-shift surrogates)."""
+    policy_version = os.getenv("REDACTION_POLICY", "v1") if redaction else "off"
+    key = f"{'on' if redaction else 'off'}:{policy_version}"
     if key not in _clients:
         mask = None
         if redaction:
             # Lazy import: loads spaCy/Presidio only when actually redacting.
             from discharge_agent.redaction.masker import get_masker
 
-            mask = get_masker().mask
+            if policy_version == "v2":
+                from discharge_agent.redaction.policy import clinical_policy_v2
+
+                mask = get_masker(policy=clinical_policy_v2()).mask
+            else:
+                mask = get_masker().mask
         _clients[key] = Langfuse(
             public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
             secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
@@ -134,8 +144,10 @@ def traced_run_note(note_text, note_id=None, model=None, redaction=False, **kwar
                 "model": model,
                 "pipeline_version": os.getenv("PIPELINE_VERSION", "0.2.0"),
                 "redaction": "on" if redaction else "off",
+                "redaction_policy": os.getenv("REDACTION_POLICY", "v1") if redaction else "off",
             },
-            tags=[f"redaction:{'on' if redaction else 'off'}", f"note:{note_id}"],
+            tags=[f"redaction:{'on' if redaction else 'off'}", f"note:{note_id}"]
+            + ([f"policy:{os.getenv('REDACTION_POLICY', 'v1')}"] if redaction else []),
             version=os.getenv("PIPELINE_VERSION", "0.2.0"),
         ):
             out = pipeline.run_note(

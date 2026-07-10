@@ -164,7 +164,8 @@ def main():
             json.dump(leaks, f, indent=2)
         return
 
-    analyzer = build_analyzer()
+    # policy v2 pairs with the extended analyzer (structural recognizers)
+    analyzer = build_analyzer(extended=(policy is not None))
 
     stats = {c: {"n": 0, "typed": 0, "any": 0} for c in CATEGORIES}
     fp_by_type = defaultdict(list)

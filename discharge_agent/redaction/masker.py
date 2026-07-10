@@ -140,12 +140,12 @@ _masker_lock = threading.Lock()
 
 def get_masker(policy=None) -> TraceMasker:
     """Shared TraceMasker (the spaCy model is ~600MB — load it once).
-    Passing a policy returns a NEW masker wired to that policy but reusing
-    the shared analyzer."""
+    Passing a policy returns a NEW masker wired to that policy and the
+    extended analyzer (policy v2's structural recognizers)."""
     global _default_masker
+    if policy is not None:
+        return TraceMasker(analyzer=build_analyzer(extended=True), policy=policy)
     with _masker_lock:
         if _default_masker is None:
             _default_masker = TraceMasker()
-        if policy is not None:
-            return TraceMasker(analyzer=_default_masker.analyzer, policy=policy)
         return _default_masker
