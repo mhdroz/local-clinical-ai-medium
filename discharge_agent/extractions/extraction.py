@@ -10,15 +10,22 @@ API = os.getenv("LLM_API")
 MODEL = os.getenv("MODEL")
 
 
-def extract_clinical_information(note):
+def extract_clinical_information(note, chat_fn=None, model=None):
+    """
+    chat_fn: optional callable (payload: dict) -> full Ollama response dict,
+             same contract as pipelines.discharge_checker.chat. Lets callers
+             inject an instrumented client; defaults to a direct request.
+    """
     payload = {
-        "model": MODEL,
+        "model": model or MODEL,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": get_user_prompt(note)},
         ],
         "stream": False,
     }
+    if chat_fn is not None:
+        return chat_fn(payload)["message"]["content"]
     r = requests.post(API, json=payload, timeout=120)
     return r.json()["message"]["content"]
 

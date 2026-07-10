@@ -1,0 +1,2711 @@
+{
+  "summary": {
+    "config": {
+      "policy": "none",
+      "score_threshold": 0.35,
+      "notes_evaluated": 10,
+      "matching": "char-overlap; typed = compatible entity type, any = any type"
+    },
+    "per_category": {
+      "PATIENT_NAME": {
+        "ground_truth_count": 15,
+        "recall_typed": 1.0,
+        "recall_masked_at_all": 1.0
+      },
+      "PROVIDER_NAME": {
+        "ground_truth_count": 23,
+        "recall_typed": 1.0,
+        "recall_masked_at_all": 1.0
+      },
+      "DOB": {
+        "ground_truth_count": 10,
+        "recall_typed": 1.0,
+        "recall_masked_at_all": 1.0
+      },
+      "DATE": {
+        "ground_truth_count": 103,
+        "recall_typed": 0.398,
+        "recall_masked_at_all": 0.485
+      },
+      "PHONE": {
+        "ground_truth_count": 10,
+        "recall_typed": 1.0,
+        "recall_masked_at_all": 1.0
+      },
+      "ADDRESS": {
+        "ground_truth_count": 11,
+        "recall_typed": 0.273,
+        "recall_masked_at_all": 0.364
+      },
+      "MRN": {
+        "ground_truth_count": 10,
+        "recall_typed": 1.0,
+        "recall_masked_at_all": 1.0
+      }
+    },
+    "overall": {
+      "false_positives_total": 159,
+      "false_positives_by_predicted_type": {
+        "DATE_TIME": 126,
+        "PERSON": 17,
+        "PHONE_NUMBER": 10,
+        "LOCATION": 6
+      },
+      "precision_typed_overall": 0.413
+    }
+  },
+  "details": {
+    "1": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "JOHNSON, ALEX",
+          "start": 6,
+          "end": 19,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "12345678",
+          "start": 44,
+          "end": 52,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-03-15",
+          "start": 69,
+          "end": 79,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-03-18",
+          "start": 103,
+          "end": 113,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1952-07-22",
+          "start": 129,
+          "end": 139,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Sarah Chen",
+          "start": 203,
+          "end": 213,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "123 Oak Street, Boston MA",
+          "start": 741,
+          "end": 766,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/15",
+          "start": 1127,
+          "end": 1132,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/15",
+          "start": 1160,
+          "end": 1165,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/18",
+          "start": 1216,
+          "end": 1221,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/15",
+          "start": 1245,
+          "end": 1250,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/18",
+          "start": 1274,
+          "end": 1279,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/15",
+          "start": 1429,
+          "end": 1434,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/17",
+          "start": 1491,
+          "end": 1496,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/21",
+          "start": 2254,
+          "end": 2259,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Martinez",
+          "start": 2305,
+          "end": 2313,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/25",
+          "start": 2323,
+          "end": 2328,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Maria Martinez",
+          "start": 2393,
+          "end": 2407,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/25/2024",
+          "start": 2416,
+          "end": 2426,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-0123",
+          "start": 2445,
+          "end": 2459,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "72-year-old M w/ h/o",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 72-year-old M w/ h/o COPD, DM2 p/w 4d productive cough, feve"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2L NC",
+          "score": 0.85,
+          "context": "mp 102.1, O2 sat 89% RA improved to 94% 2L NC. CXR showing RLL infiltrate.  Past Medi"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "O2 2L\n2",
+          "score": 0.85,
+          "context": "  Past Medical History: 1. COPD on home O2 2L 2. DM2 on metformin, dx 2018 3. HTN, well"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2018\n3",
+          "score": 0.85,
+          "context": "D on home O2 2L 2. DM2 on metformin, dx 2018 3. HTN, well-controlled 4. HLD  Social Hi"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2020",
+          "score": 0.85,
+          "context": "tory: Former smoker 30 pack-years, quit 2020. Lives alone at 123 Oak Street, Boston "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "95 22",
+          "score": 0.85,
+          "context": "sical Exam: ADMISSION: VS: 102.1 108/65 95 22 89%RA -> 94% 2L Gen: ill-appearing, mil"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "MM",
+          "score": 0.85,
+          "context": "ppearing, mild resp distress HEENT: dry MM, no JVD CV: RRR no m/r/g Pulm: decrease"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "72-year-old M",
+          "score": 0.85,
+          "context": "d consolidation  Brief Hospital Course: 72-year-old M w/ CAP admitted for IV abx. Started cef"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "24h.",
+          "score": 0.85,
+          "context": "n 03/15. Clinically improved, afebrile >24h. O2 weaned to RA by 03/17. Discharged on"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "e Medications: 1. Azithromycin 250mg PO daily x3 days 2. Metformin 1000mg PO BID 3. L"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "x3 days",
+          "score": 0.85,
+          "context": "cations: 1. Azithromycin 250mg PO daily x3 days 2. Metformin 1000mg PO BID 3. Lisinopri"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2:00 PM",
+          "score": 0.85,
+          "context": "r. Maria Martinez (PCP) - 03/25/2024 at 2:00 PM Phone: (617) 555-0123"
+        }
+      ]
+    },
+    "2": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "WILLIAMS, SARAH JANE",
+          "start": 6,
+          "end": 26,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "87654321",
+          "start": 43,
+          "end": 51,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-02-28",
+          "start": 68,
+          "end": 78,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-03-02",
+          "start": 102,
+          "end": 112,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1966-11-14",
+          "start": 128,
+          "end": 138,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Michael Thompson",
+          "start": 204,
+          "end": 220,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-02-28",
+          "start": 337,
+          "end": 347,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/28",
+          "start": 470,
+          "end": 475,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "456 Elm Avenue, Cambridge MA 02138",
+          "start": 803,
+          "end": 837,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Robert Williams",
+          "start": 851,
+          "end": 866,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/28",
+          "start": 1123,
+          "end": 1128,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/28",
+          "start": 1148,
+          "end": 1153,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/01",
+          "start": 1173,
+          "end": 1178,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/28",
+          "start": 1197,
+          "end": 1202,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/01",
+          "start": 1232,
+          "end": 1237,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/29",
+          "start": 1239,
+          "end": 1244,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/01",
+          "start": 1277,
+          "end": 1282,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "02/28",
+          "start": 1328,
+          "end": 1333,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "James Rodriguez",
+          "start": 2416,
+          "end": 2431,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/09/2024",
+          "start": 2447,
+          "end": 2457,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "03/15/2024",
+          "start": 2495,
+          "end": 2505,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-0456",
+          "start": 2524,
+          "end": 2538,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "58-year-old",
+          "score": 0.85,
+          "context": "2024-02-28  History of Present Illness: 58-year-old F w/ HTN, HLD p/w acute substernal CP 8"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "0600",
+          "score": 0.85,
+          "context": "l CP 8/10 radiating to L arm at rest at 0600 on 02/28. Associated w/ diaphoresis, na"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "0730",
+          "score": 0.85,
+          "context": "eparin. Taken emergently to cath lab at 0730.  Past Medical History: 1. HTN, dx 2019"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2019",
+          "score": 0.85,
+          "context": "0730.  Past Medical History: 1. HTN, dx 2019 2. HLD, dx 2021   3. Family h/o CAD (fa"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2021  \n3",
+          "score": 0.85,
+          "context": "cal History: 1. HTN, dx 2019 2. HLD, dx 2021   3. Family h/o CAD (father MI age 55)  Soc"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "age 55",
+          "score": 0.85,
+          "context": " dx 2021   3. Family h/o CAD (father MI age 55)  Social History: Never smoker. Rare ET"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "118/72 65",
+          "score": 0.85,
+          "context": "o m/r/g Pulm: CTAB  DISCHARGE: VS: 98.2 118/72 65 16 98%RA   Gen: well-appearing NAD CV: "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "58-year-old",
+          "score": 0.85,
+          "context": "sful PCI w/ DES  Brief Hospital Course: 58-year-old F w/ STEMI presented to cath lab for em"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "atin 80mg PO daily 5. Lisinopril 5mg PO daily  Discharge Disposition: Home  Discharge"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "charge Instructions: - Take clopidogrel daily x12 months minimum - DO NOT STOP - Card"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "months",
+          "score": 0.85,
+          "context": "tructions: - Take clopidogrel daily x12 months minimum - DO NOT STOP - Cardiac rehab r"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "10:30 AM",
+          "score": 0.85,
+          "context": " Rodriguez (Cardiology) - 03/09/2024 at 10:30 AM Cardiac Rehabilitation - 03/15/2024 at "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "9:00 AM",
+          "score": 0.85,
+          "context": " Cardiac Rehabilitation - 03/15/2024 at 9:00 AM Phone: (617) 555-0456"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "02/28 0630",
+          "score": 0.4,
+          "context": "no edema, 2+ pulses  Pertinent Results: 02/28 0630: Trop I 0.05  02/28 1200: Trop I 45.2  "
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "02/28 1200",
+          "score": 0.4,
+          "context": "inent Results: 02/28 0630: Trop I 0.05  02/28 1200: Trop I 45.2  03/01 0600: Trop I 12.1 0"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "03/01 0600",
+          "score": 0.4,
+          "context": ": Trop I 0.05  02/28 1200: Trop I 45.2  03/01 0600: Trop I 12.1 02/28: CK 89 -> CK 1250 ->"
+        }
+      ]
+    },
+    "3": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "GARCIA, MIGUEL ANTONIO",
+          "start": 6,
+          "end": 28,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "11223344",
+          "start": 43,
+          "end": 51,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-01-20",
+          "start": 68,
+          "end": 78,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-01-23",
+          "start": 102,
+          "end": 112,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "2000-03-08",
+          "start": 128,
+          "end": 138,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Patricia Kim",
+          "start": 202,
+          "end": 214,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "789 Commonwealth Ave, Boston MA 02215",
+          "start": 788,
+          "end": 825,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/20",
+          "start": 1169,
+          "end": 1174,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/22",
+          "start": 1210,
+          "end": 1215,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/20",
+          "start": 1251,
+          "end": 1256,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/22",
+          "start": 1291,
+          "end": 1296,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/21",
+          "start": 1298,
+          "end": 1303,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/22",
+          "start": 1449,
+          "end": 1454,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Lisa Chen",
+          "start": 2428,
+          "end": 2437,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/30/2024",
+          "start": 2456,
+          "end": 2466,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "01/26/2024",
+          "start": 2498,
+          "end": 2508,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-0789",
+          "start": 2528,
+          "end": 2542,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "24-year-old M w/ T1DM p/w 2d",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 24-year-old M w/ T1DM p/w 2d N/V, polyuria, polydipsia. Family repor"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Kussmaul",
+          "score": 0.85,
+          "context": "insulin since 01/18. Found lethargic w/ Kussmaul respirations in ED. Initial BG 485, pH "
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "ED",
+          "score": 0.85,
+          "context": "d lethargic w/ Kussmaul respirations in ED. Initial BG 485, pH 7.18, anion gap 28."
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "3 days ago",
+          "score": 0.85,
+          "context": "28. Mother states he ran out of insulin 3 days ago.  Past Medical History: 1. T1DM dx age "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "age 12 (2012",
+          "score": 0.85,
+          "context": " ago.  Past Medical History: 1. T1DM dx age 12 (2012) 2. Prior DKA episodes x2 (2018, 2022) "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2018,",
+          "score": 0.85,
+          "context": "age 12 (2012) 2. Prior DKA episodes x2 (2018, 2022) 3. No diabetic complications  Soc"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2022",
+          "score": 0.85,
+          "context": " (2012) 2. Prior DKA episodes x2 (2018, 2022) 3. No diabetic complications  Social H"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Carlos",
+          "score": 0.85,
+          "context": ". No tobacco/drugs. Rare ETOH. Parents: Carlos and Maria Garcia.  Physical Exam: ADMIS"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Maria Garcia",
+          "score": 0.85,
+          "context": "o/drugs. Rare ETOH. Parents: Carlos and Maria Garcia.  Physical Exam: ADMISSION: VS: 99.2 11"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "110 28 99%RA",
+          "score": 0.85,
+          "context": "ysical Exam: ADMISSION: VS: 99.2 110/70 110 28 99%RA Gen: lethargic, Kussmaul respirations H"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Kussmaul",
+          "score": 0.85,
+          "context": "9.2 110/70 110 28 99%RA Gen: lethargic, Kussmaul respirations HEENT: dry MM, fruity brea"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "MM",
+          "score": 0.85,
+          "context": "argic, Kussmaul respirations HEENT: dry MM, fruity breath CV: tachy RRR Abd: soft "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "24-year-old M",
+          "score": 0.85,
+          "context": "21: HbA1c 12.8%  Brief Hospital Course: 24-year-old M w/ DKA 2/2 insulin non-compliance. Admi"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "day",
+          "score": 0.85,
+          "context": " teaching provided re: compliance, sick day management. Social work consulted for f"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Insulin lispro",
+          "score": 0.85,
+          "context": "rgine 18u qHS (not taking - ran out) 2. Insulin lispro w/ meals (not taking - ran out)  Discha"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2:15 PM",
+          "score": 0.85,
+          "context": "sa Chen (Endocrinology) - 01/30/2024 at 2:15 PM Diabetes Educator - 01/26/2024 at 10:00"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "10:00 AM",
+          "score": 0.85,
+          "context": "15 PM Diabetes Educator - 01/26/2024 at 10:00 AM Phone: (617) 555-0789"
+        }
+      ]
+    },
+    "4": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "BROWN, DOROTHY MAE",
+          "start": 6,
+          "end": 24,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "55667788",
+          "start": 43,
+          "end": 51,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-04-12",
+          "start": 68,
+          "end": 78,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-04-16",
+          "start": 102,
+          "end": 112,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1956-09-03",
+          "start": 128,
+          "end": 138,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Robert Chang",
+          "start": 211,
+          "end": 223,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "321 Pine Street, Somerville MA 02144",
+          "start": 571,
+          "end": 607,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Nancy Brown",
+          "start": 824,
+          "end": 835,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "04/12",
+          "start": 1245,
+          "end": 1250,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "04/13",
+          "start": 1275,
+          "end": 1280,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "04/12",
+          "start": 1311,
+          "end": 1316,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "04/15",
+          "start": 1353,
+          "end": 1358,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Jennifer Park",
+          "start": 2555,
+          "end": 2568,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "04/26/2024",
+          "start": 2585,
+          "end": 2595,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/03/2024",
+          "start": 2634,
+          "end": 2644,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-0987",
+          "start": 2663,
+          "end": 2677,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "68-year-old",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 68-year-old F w/ severe COPD (FEV1 35%) on home O2 "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2019",
+          "score": 0.85,
+          "context": "O2 2. Former smoker 45 pack-years, quit 2019  3. OSA on CPAP 4. Depression, stable o"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "5y ago",
+          "score": 0.85,
+          "context": "own at same address. Former smoker quit 5y ago. Widow, husband died 2020. Has home hea"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2020",
+          "score": 0.85,
+          "context": "smoker quit 5y ago. Widow, husband died 2020. Has home health aide 3x/week.  Physica"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "3x/week",
+          "score": 0.85,
+          "context": "husband died 2020. Has home health aide 3x/week.  Physical Exam: ADMISSION: VS: 98.8 14"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2L NC",
+          "score": 0.85,
+          "context": "s  DISCHARGE: VS: 98.4 135/85 92 20 94% 2L NC Gen: comfortable, mild SOB Pulm: dimini"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "68-year-old",
+          "score": 0.85,
+          "context": " hyperinflation  Brief Hospital Course: 68-year-old F w/ COPD exacerbation treated w/ syste"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "tions on Admission: 1. Tiotropium 18mcg daily 2. Fluticasone/salmeterol 250/50 BID   "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "ome O2 2L continuous 5. Sertraline 50mg daily  Discharge Medications: 1. Prednisone 4"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "arge Medications: 1. Prednisone 40mg PO daily x5d 2. Azithromycin 250mg PO daily x5d "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "g PO daily x5d 2. Azithromycin 250mg PO daily x5d 3. Tiotropium 18mcg inhaled daily 4"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "O daily x5d 3. Tiotropium 18mcg inhaled daily 4. Albuterol/ipratropium neb Q6H x1 wee"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "ome O2 2L continuous 7. Sertraline 50mg daily  Discharge Disposition: Home  Discharge"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Nancy",
+          "score": 0.85,
+          "context": "urn for worsening SOB, fever - Daughter Nancy to assist with medications  Followup In"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "1:30 PM",
+          "score": 0.85,
+          "context": "ifer Park (Pulmonology) - 04/26/2024 at 1:30 PM Pulmonary Rehabilitation - 05/03/2024 a"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "9:00 AM",
+          "score": 0.85,
+          "context": "ulmonary Rehabilitation - 05/03/2024 at 9:00 AM Phone: (617) 555-0987"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "555-0987",
+          "score": 0.85,
+          "context": "on - 05/03/2024 at 9:00 AM Phone: (617) 555-0987"
+        }
+      ]
+    },
+    "5": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "ANDERSON, FRANK WILLIAM",
+          "start": 6,
+          "end": 29,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "99887766",
+          "start": 43,
+          "end": 51,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-05-08",
+          "start": 68,
+          "end": 78,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-05-12",
+          "start": 102,
+          "end": 112,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1949-12-25",
+          "start": 128,
+          "end": 138,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Amanda Foster",
+          "start": 201,
+          "end": 214,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-05-09",
+          "start": 338,
+          "end": 348,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "654 Maple Drive, Newton MA 02458",
+          "start": 746,
+          "end": 778,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Helen Anderson",
+          "start": 789,
+          "end": 803,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/08",
+          "start": 1170,
+          "end": 1175,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/11",
+          "start": 1233,
+          "end": 1238,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/08",
+          "start": 1294,
+          "end": 1299,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/11",
+          "start": 1322,
+          "end": 1327,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/09",
+          "start": 1329,
+          "end": 1334,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/09",
+          "start": 1384,
+          "end": 1389,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/19",
+          "start": 2475,
+          "end": 2480,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Mark Sullivan",
+          "start": 2630,
+          "end": 2643,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "05/22/2024",
+          "start": 2656,
+          "end": 2666,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-1234",
+          "start": 2686,
+          "end": 2700,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "75-year-old M w/ h/",
+          "score": 0.85,
+          "context": "2024-05-09  History of Present Illness: 75-year-old M w/ h/o cholelithiasis p/w acute RUQ pain, fev"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Charcot",
+          "score": 0.85,
+          "context": "w/ N/V, decreased appetite. Presents w/ Charcot's triad. Wife reports yellow eyes since"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "morning",
+          "score": 0.85,
+          "context": "s triad. Wife reports yellow eyes since morning.  Past Medical History: 1. Cholelithias"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Cholelithiasis",
+          "score": 0.85,
+          "context": "ince morning.  Past Medical History: 1. Cholelithiasis, dx 2022 2. HTN, well-controlled 3. BPH"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2022\n2",
+          "score": 0.85,
+          "context": " Medical History: 1. Cholelithiasis, dx 2022 2. HTN, well-controlled 3. BPH, stable  S"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "48 years",
+          "score": 0.85,
+          "context": "02458 with wife Helen Anderson (married 48 years). No tobacco/ETOH. Has 3 adult children"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "128/76 78",
+          "score": 0.85,
+          "context": "sign Ext: no edema  DISCHARGE: VS: 98.6 128/76 78 16 97%RA Gen: well-appearing, NAD HEENT"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "75-year-old M",
+          "score": 0.85,
+          "context": " and extraction  Brief Hospital Course: 75-year-old M w/ acute cholangitis underwent emergent"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "6-8 weeks",
+          "score": 0.85,
+          "context": "nsulted re: elective cholecystectomy in 6-8 weeks.  Medications on Admission: 1. Lisinopr"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": " Tamsulosin 0.4mg daily 3. Aspirin 81mg daily  Discharge Medications: 1. Ciprofloxaci"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": " Tamsulosin 0.4mg daily 6. Aspirin 81mg daily  Discharge Disposition: Home  Discharge"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "today",
+          "score": 0.85,
+          "context": "Discharge Instructions: - Clear liquids today, advance diet as tolerated - Complete a"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Helen",
+          "score": 0.85,
+          "context": "rn for fever, abd pain, jaundice - Wife Helen to monitor for symptoms  Followup Instr"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "11:15 AM",
+          "score": 0.85,
+          "context": "Mark Sullivan (Surgery) - 05/22/2024 at 11:15 AM Phone: (617) 555-1234"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "05/08 1800",
+          "score": 0.4,
+          "context": "mild RUQ tenderness  Pertinent Results: 05/08 1800: T bili 8.5 D bili 6.2 ALT 285 AST 195 "
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "05/11 0600",
+          "score": 0.4,
+          "context": "D bili 6.2 ALT 285 AST 195 Alk phos 445 05/11 0600: T bili 2.1 D bili 1.4 ALT 89 AST 72 Al"
+        }
+      ]
+    },
+    "6": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "THOMPSON, BETTY LOUISE",
+          "start": 6,
+          "end": 28,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "44556677",
+          "start": 43,
+          "end": 51,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-06-05",
+          "start": 68,
+          "end": 78,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-06-09",
+          "start": 102,
+          "end": 112,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1942-08-17",
+          "start": 128,
+          "end": 138,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "David Wong",
+          "start": 204,
+          "end": 214,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "890 Oak Avenue, Brookline MA 02446",
+          "start": 586,
+          "end": 620,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/05",
+          "start": 1223,
+          "end": 1228,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/08",
+          "start": 1256,
+          "end": 1261,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/06",
+          "start": 1288,
+          "end": 1293,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/05",
+          "start": 1329,
+          "end": 1334,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/08",
+          "start": 1357,
+          "end": 1362,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Rachel Stone",
+          "start": 2534,
+          "end": 2546,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/16/2024",
+          "start": 2562,
+          "end": 2572,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Kevin Murphy",
+          "start": 2589,
+          "end": 2601,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "06/20/2024",
+          "start": 2617,
+          "end": 2627,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-2468",
+          "start": 2646,
+          "end": 2660,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "82-year-old",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 82-year-old F w/ CHF EF 35%, CKD stage 3 p/w 5d dec"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "over past week",
+          "score": 0.85,
+          "context": "on-compliance and increased salt intake over past week. Weight up 8 lbs from baseline (from 14"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "02446",
+          "score": 0.85,
+          "context": "ed Living, 890 Oak Avenue, Brookline MA 02446.  Past Medical History: 1. CKD stage 3 "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2021\n3",
+          "score": 0.85,
+          "context": "e 3 (baseline Cr 1.4) 2. CHF EF 35%, dx 2021 3. DM2, dx 2015 4. HTN, dx 2008  Social H"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2015\n4",
+          "score": 0.85,
+          "context": " 1.4) 2. CHF EF 35%, dx 2021 3. DM2, dx 2015 4. HTN, dx 2008  Social History: Retired "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2008",
+          "score": 0.85,
+          "context": "35%, dx 2021 3. DM2, dx 2015 4. HTN, dx 2008  Social History: Retired elementary sch"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2019",
+          "score": 0.85,
+          "context": "ired elementary school teacher. Widowed 2019. Lives at assisted living facility. Has"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2x/week",
+          "score": 0.85,
+          "context": "ted living facility. Has visiting nurse 2x/week. Daughter visits weekly. No tobacco/ETO"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "weekly",
+          "score": 0.85,
+          "context": "visiting nurse 2x/week. Daughter visits weekly. No tobacco/ETOH.  Physical Exam: ADMIS"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "68 18",
+          "score": 0.85,
+          "context": "ilateral LE  DISCHARGE: VS: 98.1 142/88 68 18 96%RA Gen: comfortable, NAD CV: RRR, JV"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "0600",
+          "score": 0.85,
+          "context": " 06/05 0600: Cr 3.2 BUN 85 K 5.8  06/08 0600: Cr 1.8 BUN 45 K 4.2 06/06: Echo: EF 35"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "82-year-old",
+          "score": 0.85,
+          "context": "BNP 456 (06/08)  Brief Hospital Course: 82-year-old F w/ acute on chronic kidney injury in "
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "AKI",
+          "score": 0.85,
+          "context": "D 3. Lisinopril 10mg daily (held due to AKI) 4. Insulin glargine 15u daily  Dischar"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "eld due to AKI) 4. Insulin glargine 15u daily  Discharge Medications: 1. Furosemide 4"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "ilol 6.25mg PO BID 3. Lisinopril 5mg PO daily (reduced dose) 4. Insulin glargine 15u "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "us daily 5. Potassium chloride 20mEq PO daily  Discharge Disposition: Home (Assisted "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "l if gain >3 lbs - Fluid restriction 2L daily   - Low sodium diet <2g daily - VNA for"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "ghts - Assisted living staff to monitor daily weights  Followup Instructions: Dr. Rac"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "10:00 AM",
+          "score": 0.85,
+          "context": "chel Stone (Nephrology) - 06/16/2024 at 10:00 AM Dr. Kevin Murphy (Cardiology) - 06/20/2"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2:30 PM",
+          "score": 0.85,
+          "context": "vin Murphy (Cardiology) - 06/20/2024 at 2:30 PM Phone: (617) 555-2468"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "06/05 0600",
+          "score": 0.4,
+          "context": " edema bilateral LE  Pertinent Results: 06/05 0600: Cr 3.2 BUN 85 K 5.8  06/08 0600: Cr 1."
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "06/08 0600",
+          "score": 0.4,
+          "context": "sults: 06/05 0600: Cr 3.2 BUN 85 K 5.8  06/08 0600: Cr 1.8 BUN 45 K 4.2 06/06: Echo: EF 35"
+        }
+      ]
+    },
+    "7": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "MARTINEZ, CARLOS JOS\u00c9",
+          "start": 6,
+          "end": 27,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "33445566",
+          "start": 42,
+          "end": 50,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-07-14",
+          "start": 69,
+          "end": 79,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-07-17",
+          "start": 103,
+          "end": 113,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1979-05-30",
+          "start": 129,
+          "end": 139,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Linda Rodriguez",
+          "start": 203,
+          "end": 218,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "147 Beacon Street, Chelsea MA 02150",
+          "start": 573,
+          "end": 608,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/14",
+          "start": 1194,
+          "end": 1199,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/17",
+          "start": 1227,
+          "end": 1232,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/14",
+          "start": 1251,
+          "end": 1256,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/17",
+          "start": 1278,
+          "end": 1283,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/14",
+          "start": 1296,
+          "end": 1301,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/27",
+          "start": 2232,
+          "end": 2237,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Maria Gonzalez",
+          "start": 2428,
+          "end": 2442,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "07/24/2024",
+          "start": 2451,
+          "end": 2461,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Thomas Lee",
+          "start": 2477,
+          "end": 2487,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/05/2024",
+          "start": 2506,
+          "end": 2516,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-3579",
+          "start": 2535,
+          "end": 2549,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "45-year-old M",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 45-year-old M w/ DM2, PVD p/w 3d R LE redness, warmth"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "1 wk ago",
+          "score": 0.85,
+          "context": ", swelling. Reports minor trauma to leg 1 wk ago while working construction. Area progre"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2015",
+          "score": 0.85,
+          "context": "l History: 1. DM2 poorly controlled, dx 2015 2. PVD, dx 2020   3. Obesity BMI 38 4. "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2020  \n3",
+          "score": 0.85,
+          "context": "2 poorly controlled, dx 2015 2. PVD, dx 2020   3. Obesity BMI 38 4. HTN, dx 2018  Social"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2018",
+          "score": 0.85,
+          "context": " dx 2020   3. Obesity BMI 38 4. HTN, dx 2018  Social History: Works construction for"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Rosa Martinez",
+          "score": 0.85,
+          "context": "struction. Smoker 1ppd x20y. Married to Rosa Martinez, has 2 teenage children. Drinks beer on"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "45-year-old",
+          "score": 0.85,
+          "context": "rowth x48 hours  Brief Hospital Course: 45-year-old M w/ R LE cellulitis treated w/ IV clin"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Glipizide",
+          "score": 0.85,
+          "context": "on Admission: 1. Metformin 500mg BID 2. Glipizide 5mg daily 3. Lisinopril 10mg daily  Dis"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "mg",
+          "score": 0.85,
+          "context": "n: 1. Metformin 500mg BID 2. Glipizide 5mg daily 3. Lisinopril 10mg daily  Dischar"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": " Glipizide 5mg daily 3. Lisinopril 10mg daily  Discharge Medications: 1. Clindamycin "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "ro per sliding scale 5. Lisinopril 10mg daily  Discharge Disposition: Home  Discharge"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "x1 week",
+          "score": 0.85,
+          "context": "rovided - Work restrictions: light duty x1 week  Followup Instructions: Dr. Maria Gonza"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "3:00 PM",
+          "score": 0.85,
+          "context": "r. Maria Gonzalez (PCP) - 07/24/2024 at 3:00 PM Dr. Thomas Lee (Endocrinology) - 08/05/"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "1:45 PM",
+          "score": 0.85,
+          "context": "mas Lee (Endocrinology) - 08/05/2024 at 1:45 PM Phone: (617) 555-3579"
+        }
+      ]
+    },
+    "8": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "DAVIS, ROBERT EUGENE",
+          "start": 6,
+          "end": 26,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "22334455",
+          "start": 42,
+          "end": 50,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-08-22",
+          "start": 67,
+          "end": 77,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-08-25",
+          "start": 101,
+          "end": 111,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1961-04-12",
+          "start": 127,
+          "end": 137,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Susan Kim",
+          "start": 209,
+          "end": 218,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-08-23",
+          "start": 348,
+          "end": 358,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "258 Highland Road, Medford MA 02155",
+          "start": 818,
+          "end": 853,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Janet Davis",
+          "start": 864,
+          "end": 875,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/22",
+          "start": 1225,
+          "end": 1230,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/24",
+          "start": 1261,
+          "end": 1266,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/22",
+          "start": 1305,
+          "end": 1310,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/24",
+          "start": 1344,
+          "end": 1349,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "08/23",
+          "start": 1356,
+          "end": 1361,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Andrew Peterson",
+          "start": 2585,
+          "end": 2600,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/05/2024",
+          "start": 2608,
+          "end": 2618,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/18/2024",
+          "start": 2643,
+          "end": 2653,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-4680",
+          "start": 2673,
+          "end": 2687,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "63-year-old M w/ h/o PUD p/w 2d",
+          "score": 0.85,
+          "context": "2024-08-23  History of Present Illness: 63-year-old M w/ h/o PUD p/w 2d melena and fatigue. Reports taking ibup"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2019",
+          "score": 0.85,
+          "context": "ager.  Past Medical History: 1. PUD, dx 2019 after H.pylori treatment 2. Chronic bac"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "02155",
+          "score": 0.85,
+          "context": " Lives at 258 Highland Road, Medford MA 02155 with wife Janet Davis. Social ETOH (2-3"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "98 18",
+          "score": 0.85,
+          "context": "ysical Exam: ADMISSION: VS: 98.8 110/65 98 18 98%RA Gen: pale, fatigued but alert HEE"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "72 16 98%RA",
+          "score": 0.85,
+          "context": "ac positive  DISCHARGE: VS: 98.4 125/75 72 16 98%RA Gen: well-appearing, NAD Abd: soft NTND"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "63-year-old M",
+          "score": 0.85,
+          "context": "pylori negative  Brief Hospital Course: 63-year-old M w/ UGIB 2/2 duodenal ulcer. Received 2u"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "81mg",
+          "score": 0.85,
+          "context": "ED) 2. Lisinopril 10mg daily 3. Aspirin 81mg daily (HELD)  Discharge Medications: 1."
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "x8 weeks",
+          "score": 0.85,
+          "context": " Medications: 1. Omeprazole 40mg PO BID x8 weeks 2. Sucralfate 1g PO QID x4 weeks 3. Iro"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "50mg PO Q6H PRN pain 5. Lisinopril 10mg daily  Discharge Disposition: Home  Discharge"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "6-8 weeks",
+          "score": 0.85,
+          "context": "profen, naproxen, etc.) - Repeat EGD in 6-8 weeks (scheduled) - Return for black stools, "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2:15 PM",
+          "score": 0.85,
+          "context": "r. Andrew Peterson (GI) - 09/05/2024 at 2:15 PM Repeat EGD - 10/18/2024 at 11:00 AM Pho"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "11:00 AM",
+          "score": 0.85,
+          "context": "4 at 2:15 PM Repeat EGD - 10/18/2024 at 11:00 AM Phone: (617) 555-4680"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "08/22 1800",
+          "score": 0.4,
+          "context": "al: guaiac negative  Pertinent Results: 08/22 1800: Hgb 7.8 Hct 24% Plt 245 08/24 0600: Hg"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "08/24 0600",
+          "score": 0.4,
+          "context": "ts: 08/22 1800: Hgb 7.8 Hct 24% Plt 245 08/24 0600: Hgb 10.2 Hct 31% (post-2u PRBC) 08/22:"
+        }
+      ]
+    },
+    "9": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "TAYLOR, MARGARET ANNE",
+          "start": 6,
+          "end": 27,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "11223355",
+          "start": 42,
+          "end": 50,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-09-10",
+          "start": 67,
+          "end": 77,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-09-15",
+          "start": 101,
+          "end": 111,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1953-06-28",
+          "start": 127,
+          "end": 137,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Christopher Lee",
+          "start": 202,
+          "end": 217,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/10",
+          "start": 471,
+          "end": 476,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/09",
+          "start": 581,
+          "end": 586,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "492 Riverside Drive, Watertown MA 02472",
+          "start": 797,
+          "end": 836,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "William Taylor",
+          "start": 850,
+          "end": 864,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/10",
+          "start": 1276,
+          "end": 1281,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/11",
+          "start": 1312,
+          "end": 1317,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/11",
+          "start": 1356,
+          "end": 1361,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/12",
+          "start": 1400,
+          "end": 1405,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Emily Zhang",
+          "start": 2561,
+          "end": 2572,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/25/2024",
+          "start": 2587,
+          "end": 2597,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "09/18/2024",
+          "start": 2622,
+          "end": 2632,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-7890",
+          "start": 2651,
+          "end": 2665,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "71-year-old",
+          "score": 0.85,
+          "context": "dure: None  History of Present Illness: 71-year-old F w/ Afib (not on anticoag due to fall "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2008",
+          "score": 0.85,
+          "context": "oagulation due to fall risk) 2. HTN, dx 2008 3. HLD, dx 2012   4. Prior TIA 2022, re"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2012  \n4",
+          "score": 0.85,
+          "context": "o fall risk) 2. HTN, dx 2008 3. HLD, dx 2012   4. Prior TIA 2022, resolved completely  S"
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "US",
+          "score": 0.85,
+          "context": "EF 55%, no thrombus seen 09/12: Carotid US: <50% stenosis bilaterally  Brief Hospi"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "71-year-old",
+          "score": 0.85,
+          "context": "sis bilaterally  Brief Hospital Course: 71-year-old F w/ acute ischemic stroke R MCA territ"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Neurology",
+          "score": 0.85,
+          "context": "ry. Managed w/ ASA, statin, BP control. Neurology consulted daily. Started anticoag for 2"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "statin, BP control. Neurology consulted daily. Started anticoag for 2\u00b0 stroke prevent"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "isinopril 5mg daily 3. Simvastatin 20mg daily  Discharge Medications: 1. Warfarin 5mg"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "trate 50mg PO BID 5. Lisinopril 10mg PO daily  Discharge Disposition: Home w/ home he"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "weekly",
+          "score": 0.85,
+          "context": "ns: - INR check 09/18, goal 2-3 - PT 3x weekly at home - Return for new weakness, spee"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Neurology",
+          "score": 0.85,
+          "context": "Followup Instructions: Dr. Emily Zhang (Neurology) - 09/25/2024 at 1:30 PM INR clinic - 0"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "1:30 PM",
+          "score": 0.85,
+          "context": "Emily Zhang (Neurology) - 09/25/2024 at 1:30 PM INR clinic - 09/18/2024 at 9:00 AM Phon"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "9:00 AM",
+          "score": 0.85,
+          "context": "4 at 1:30 PM INR clinic - 09/18/2024 at 9:00 AM Phone: (617) 555-7890"
+        },
+        {
+          "entity_type": "PHONE_NUMBER",
+          "text": "98.6 145/90 78",
+          "score": 0.4,
+          "context": " irreg irreg, no murmur  DISCHARGE: VS: 98.6 145/90 78 irr 16 97%RA Gen: alert, comfortable Ne"
+        }
+      ]
+    },
+    "10": {
+      "entities": [
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "WILSON, DOROTHY HELEN",
+          "start": 6,
+          "end": 27,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "MRN",
+          "text": "66778899",
+          "start": 42,
+          "end": 50,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-10-03",
+          "start": 67,
+          "end": 77,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-10-08",
+          "start": 101,
+          "end": 111,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DOB",
+          "text": "1940-02-14",
+          "start": 127,
+          "end": 137,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Michael Johnson",
+          "start": 211,
+          "end": 226,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "2024-10-04",
+          "start": 344,
+          "end": 354,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/03",
+          "start": 462,
+          "end": 467,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "123 Sunset Boulevard, Brighton MA 02135",
+          "start": 604,
+          "end": 643,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/03",
+          "start": 1340,
+          "end": 1345,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/05",
+          "start": 1376,
+          "end": 1381,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/06",
+          "start": 1383,
+          "end": 1388,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/04",
+          "start": 1551,
+          "end": 1556,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
+          "entity_type": "PROVIDER_NAME",
+          "text": "Michael Johnson",
+          "start": 2621,
+          "end": 2636,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "DATE",
+          "text": "10/22/2024",
+          "start": 2660,
+          "end": 2670,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PHONE",
+          "text": "(617) 555-9012",
+          "start": 2724,
+          "end": 2738,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "456 Care Lane, Brighton MA 02135",
+          "start": 2781,
+          "end": 2813,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        }
+      ],
+      "false_positives": [
+        {
+          "entity_type": "DATE_TIME",
+          "text": "84-year-old",
+          "score": 0.85,
+          "context": "2024-10-04  History of Present Illness: 84-year-old F w/ osteoporosis p/w R hip pain after "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2018\n2",
+          "score": 0.85,
+          "context": "st Medical History: 1. Osteoporosis, dx 2018 2. HTN, well-controlled 3. Mild cognitive"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "past year",
+          "score": 0.85,
+          "context": "cognitive impairment 4. H/o falls x2 in past year  Social History: Widowed 2020, lives al"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2020",
+          "score": 0.85,
+          "context": "2 in past year  Social History: Widowed 2020, lives alone in single-family home. Dau"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "Karen Wilson",
+          "score": 0.85,
+          "context": "s alone in single-family home. Daughter Karen Wilson lives 2 miles away, visits daily. No to"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "Karen Wilson lives 2 miles away, visits daily. No tobacco/ETOH. Former librarian. Ind"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "138/78 68",
+          "score": 0.85,
+          "context": "x2 (person, place)  DISCHARGE: VS: 98.4 138/78 68 16 96%RA Gen: comfortable, A&O x3 Ext: "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "84-year-old",
+          "score": 0.85,
+          "context": "o complications  Brief Hospital Course: 84-year-old F s/p uncomplicated ORIF R femoral neck"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "carbonate 500mg BID 3. Vitamin D3 1000u daily  Discharge Medications: 1. Oxycodone 5m"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "min D3 2000u PO daily 6. Amlodipine 5mg daily  Discharge Disposition: Skilled nursing"
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "Sunshine Manor",
+          "score": 0.85,
+          "context": " Disposition: Skilled nursing facility (Sunshine Manor)  Discharge Diagnosis: Primary: R femor"
+        },
+        {
+          "entity_type": "PERSON",
+          "text": "walker\n- PT",
+          "score": 0.85,
+          "context": "Discharge Instructions: - WBAT R leg w/ walker - PT daily at SNF for 2-4 weeks - Fall risk "
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "daily",
+          "score": 0.85,
+          "context": "structions: - WBAT R leg w/ walker - PT daily at SNF for 2-4 weeks - Fall risk assess"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "2-4 weeks",
+          "score": 0.85,
+          "context": "T R leg w/ walker - PT daily at SNF for 2-4 weeks - Fall risk assessment completed - Retu"
+        },
+        {
+          "entity_type": "DATE_TIME",
+          "text": "9:30 AM",
+          "score": 0.85,
+          "context": "on (Orthopedic Surgery) - 10/22/2024 at 9:30 AM Physical Therapy evaluation at SNF Phon"
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "SNF",
+          "score": 0.85,
+          "context": " 9:30 AM Physical Therapy evaluation at SNF Phone: (617) 555-9012 Skilled Nursing F"
+        },
+        {
+          "entity_type": "LOCATION",
+          "text": "Sunshine Manor",
+          "score": 0.85,
+          "context": "617) 555-9012 Skilled Nursing Facility: Sunshine Manor, 456 Care Lane, Brighton MA 02135"
+        }
+      ]
+    }
+  }
+}

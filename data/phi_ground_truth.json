@@ -1,0 +1,1346 @@
+{
+  "1": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "JOHNSON, ALEX",
+        "start": 6,
+        "end": 19,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "12345678",
+        "start": 44,
+        "end": 52,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-03-15",
+        "start": 69,
+        "end": 79,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-03-18",
+        "start": 103,
+        "end": 113,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1952-07-22",
+        "start": 129,
+        "end": 139,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Sarah Chen",
+        "start": 203,
+        "end": 213,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "123 Oak Street, Boston MA",
+        "start": 741,
+        "end": 766,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/15",
+        "start": 1127,
+        "end": 1132,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/15",
+        "start": 1160,
+        "end": 1165,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/18",
+        "start": 1216,
+        "end": 1221,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/15",
+        "start": 1245,
+        "end": 1250,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/18",
+        "start": 1274,
+        "end": 1279,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/15",
+        "start": 1429,
+        "end": 1434,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/17",
+        "start": 1491,
+        "end": 1496,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/21",
+        "start": 2254,
+        "end": 2259,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Martinez",
+        "start": 2305,
+        "end": 2313,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/25",
+        "start": 2323,
+        "end": 2328,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Maria Martinez",
+        "start": 2393,
+        "end": 2407,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/25/2024",
+        "start": 2416,
+        "end": 2426,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-0123",
+        "start": 2445,
+        "end": 2459,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "2": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "WILLIAMS, SARAH JANE",
+        "start": 6,
+        "end": 26,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "87654321",
+        "start": 43,
+        "end": 51,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-02-28",
+        "start": 68,
+        "end": 78,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-03-02",
+        "start": 102,
+        "end": 112,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1966-11-14",
+        "start": 128,
+        "end": 138,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Michael Thompson",
+        "start": 204,
+        "end": 220,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-02-28",
+        "start": 337,
+        "end": 347,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/28",
+        "start": 470,
+        "end": 475,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "456 Elm Avenue, Cambridge MA 02138",
+        "start": 803,
+        "end": 837,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Robert Williams",
+        "start": 851,
+        "end": 866,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/28",
+        "start": 1123,
+        "end": 1128,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/28",
+        "start": 1148,
+        "end": 1153,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/01",
+        "start": 1173,
+        "end": 1178,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/28",
+        "start": 1197,
+        "end": 1202,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/01",
+        "start": 1232,
+        "end": 1237,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/29",
+        "start": 1239,
+        "end": 1244,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/01",
+        "start": 1277,
+        "end": 1282,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "02/28",
+        "start": 1328,
+        "end": 1333,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "James Rodriguez",
+        "start": 2416,
+        "end": 2431,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/09/2024",
+        "start": 2447,
+        "end": 2457,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "03/15/2024",
+        "start": 2495,
+        "end": 2505,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-0456",
+        "start": 2524,
+        "end": 2538,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "3": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "GARCIA, MIGUEL ANTONIO",
+        "start": 6,
+        "end": 28,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "11223344",
+        "start": 43,
+        "end": 51,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-01-20",
+        "start": 68,
+        "end": 78,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-01-23",
+        "start": 102,
+        "end": 112,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "2000-03-08",
+        "start": 128,
+        "end": 138,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Patricia Kim",
+        "start": 202,
+        "end": 214,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "789 Commonwealth Ave, Boston MA 02215",
+        "start": 788,
+        "end": 825,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/20",
+        "start": 1169,
+        "end": 1174,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/22",
+        "start": 1210,
+        "end": 1215,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/20",
+        "start": 1251,
+        "end": 1256,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/22",
+        "start": 1291,
+        "end": 1296,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/21",
+        "start": 1298,
+        "end": 1303,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/22",
+        "start": 1449,
+        "end": 1454,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Lisa Chen",
+        "start": 2428,
+        "end": 2437,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/30/2024",
+        "start": 2456,
+        "end": 2466,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "01/26/2024",
+        "start": 2498,
+        "end": 2508,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-0789",
+        "start": 2528,
+        "end": 2542,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "4": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "BROWN, DOROTHY MAE",
+        "start": 6,
+        "end": 24,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "55667788",
+        "start": 43,
+        "end": 51,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-04-12",
+        "start": 68,
+        "end": 78,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-04-16",
+        "start": 102,
+        "end": 112,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1956-09-03",
+        "start": 128,
+        "end": 138,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Robert Chang",
+        "start": 211,
+        "end": 223,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "321 Pine Street, Somerville MA 02144",
+        "start": 571,
+        "end": 607,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Nancy Brown",
+        "start": 824,
+        "end": 835,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "04/12",
+        "start": 1245,
+        "end": 1250,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "04/13",
+        "start": 1275,
+        "end": 1280,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "04/12",
+        "start": 1311,
+        "end": 1316,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "04/15",
+        "start": 1353,
+        "end": 1358,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Jennifer Park",
+        "start": 2555,
+        "end": 2568,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "04/26/2024",
+        "start": 2585,
+        "end": 2595,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/03/2024",
+        "start": 2634,
+        "end": 2644,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-0987",
+        "start": 2663,
+        "end": 2677,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "5": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "ANDERSON, FRANK WILLIAM",
+        "start": 6,
+        "end": 29,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "99887766",
+        "start": 43,
+        "end": 51,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-05-08",
+        "start": 68,
+        "end": 78,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-05-12",
+        "start": 102,
+        "end": 112,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1949-12-25",
+        "start": 128,
+        "end": 138,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Amanda Foster",
+        "start": 201,
+        "end": 214,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-05-09",
+        "start": 338,
+        "end": 348,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "654 Maple Drive, Newton MA 02458",
+        "start": 746,
+        "end": 778,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Helen Anderson",
+        "start": 789,
+        "end": 803,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/08",
+        "start": 1170,
+        "end": 1175,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/11",
+        "start": 1233,
+        "end": 1238,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/08",
+        "start": 1294,
+        "end": 1299,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/11",
+        "start": 1322,
+        "end": 1327,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/09",
+        "start": 1329,
+        "end": 1334,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/09",
+        "start": 1384,
+        "end": 1389,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/19",
+        "start": 2475,
+        "end": 2480,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Mark Sullivan",
+        "start": 2630,
+        "end": 2643,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "05/22/2024",
+        "start": 2656,
+        "end": 2666,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-1234",
+        "start": 2686,
+        "end": 2700,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "6": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "THOMPSON, BETTY LOUISE",
+        "start": 6,
+        "end": 28,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "44556677",
+        "start": 43,
+        "end": 51,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-06-05",
+        "start": 68,
+        "end": 78,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-06-09",
+        "start": 102,
+        "end": 112,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1942-08-17",
+        "start": 128,
+        "end": 138,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "David Wong",
+        "start": 204,
+        "end": 214,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "890 Oak Avenue, Brookline MA 02446",
+        "start": 586,
+        "end": 620,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/05",
+        "start": 1223,
+        "end": 1228,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/08",
+        "start": 1256,
+        "end": 1261,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/06",
+        "start": 1288,
+        "end": 1293,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/05",
+        "start": 1329,
+        "end": 1334,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/08",
+        "start": 1357,
+        "end": 1362,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Rachel Stone",
+        "start": 2534,
+        "end": 2546,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/16/2024",
+        "start": 2562,
+        "end": 2572,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Kevin Murphy",
+        "start": 2589,
+        "end": 2601,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "06/20/2024",
+        "start": 2617,
+        "end": 2627,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-2468",
+        "start": 2646,
+        "end": 2660,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "7": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "MARTINEZ, CARLOS JOS\u00c9",
+        "start": 6,
+        "end": 27,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "33445566",
+        "start": 42,
+        "end": 50,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-07-14",
+        "start": 69,
+        "end": 79,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-07-17",
+        "start": 103,
+        "end": 113,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1979-05-30",
+        "start": 129,
+        "end": 139,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Linda Rodriguez",
+        "start": 203,
+        "end": 218,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "147 Beacon Street, Chelsea MA 02150",
+        "start": 573,
+        "end": 608,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/14",
+        "start": 1194,
+        "end": 1199,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/17",
+        "start": 1227,
+        "end": 1232,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/14",
+        "start": 1251,
+        "end": 1256,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/17",
+        "start": 1278,
+        "end": 1283,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/14",
+        "start": 1296,
+        "end": 1301,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/27",
+        "start": 2232,
+        "end": 2237,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Maria Gonzalez",
+        "start": 2428,
+        "end": 2442,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "07/24/2024",
+        "start": 2451,
+        "end": 2461,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Thomas Lee",
+        "start": 2477,
+        "end": 2487,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/05/2024",
+        "start": 2506,
+        "end": 2516,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-3579",
+        "start": 2535,
+        "end": 2549,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "8": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "DAVIS, ROBERT EUGENE",
+        "start": 6,
+        "end": 26,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "22334455",
+        "start": 42,
+        "end": 50,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-08-22",
+        "start": 67,
+        "end": 77,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-08-25",
+        "start": 101,
+        "end": 111,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1961-04-12",
+        "start": 127,
+        "end": 137,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Susan Kim",
+        "start": 209,
+        "end": 218,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-08-23",
+        "start": 348,
+        "end": 358,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "258 Highland Road, Medford MA 02155",
+        "start": 818,
+        "end": 853,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Janet Davis",
+        "start": 864,
+        "end": 875,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/22",
+        "start": 1225,
+        "end": 1230,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/24",
+        "start": 1261,
+        "end": 1266,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/22",
+        "start": 1305,
+        "end": 1310,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/24",
+        "start": 1344,
+        "end": 1349,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "08/23",
+        "start": 1356,
+        "end": 1361,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Andrew Peterson",
+        "start": 2585,
+        "end": 2600,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/05/2024",
+        "start": 2608,
+        "end": 2618,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/18/2024",
+        "start": 2643,
+        "end": 2653,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-4680",
+        "start": 2673,
+        "end": 2687,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "9": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "TAYLOR, MARGARET ANNE",
+        "start": 6,
+        "end": 27,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "11223355",
+        "start": 42,
+        "end": 50,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-09-10",
+        "start": 67,
+        "end": 77,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-09-15",
+        "start": 101,
+        "end": 111,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1953-06-28",
+        "start": 127,
+        "end": 137,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Christopher Lee",
+        "start": 202,
+        "end": 217,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/10",
+        "start": 471,
+        "end": 476,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/09",
+        "start": 581,
+        "end": 586,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "492 Riverside Drive, Watertown MA 02472",
+        "start": 797,
+        "end": 836,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "William Taylor",
+        "start": 850,
+        "end": 864,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/10",
+        "start": 1276,
+        "end": 1281,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/11",
+        "start": 1312,
+        "end": 1317,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/11",
+        "start": 1356,
+        "end": 1361,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/12",
+        "start": 1400,
+        "end": 1405,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Emily Zhang",
+        "start": 2561,
+        "end": 2572,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/25/2024",
+        "start": 2587,
+        "end": 2597,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "09/18/2024",
+        "start": 2622,
+        "end": 2632,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-7890",
+        "start": 2651,
+        "end": 2665,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  },
+  "10": {
+    "entities": [
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "WILSON, DOROTHY HELEN",
+        "start": 6,
+        "end": 27,
+        "placeholder": null
+      },
+      {
+        "entity_type": "MRN",
+        "text": "66778899",
+        "start": 42,
+        "end": 50,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-10-03",
+        "start": 67,
+        "end": 77,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-10-08",
+        "start": 101,
+        "end": 111,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DOB",
+        "text": "1940-02-14",
+        "start": 127,
+        "end": 137,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Michael Johnson",
+        "start": 211,
+        "end": 226,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "2024-10-04",
+        "start": 344,
+        "end": 354,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/03",
+        "start": 462,
+        "end": 467,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "123 Sunset Boulevard, Brighton MA 02135",
+        "start": 604,
+        "end": 643,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/03",
+        "start": 1340,
+        "end": 1345,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/05",
+        "start": 1376,
+        "end": 1381,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/06",
+        "start": 1383,
+        "end": 1388,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/04",
+        "start": 1551,
+        "end": 1556,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PROVIDER_NAME",
+        "text": "Michael Johnson",
+        "start": 2621,
+        "end": 2636,
+        "placeholder": null
+      },
+      {
+        "entity_type": "DATE",
+        "text": "10/22/2024",
+        "start": 2660,
+        "end": 2670,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PHONE",
+        "text": "(617) 555-9012",
+        "start": 2724,
+        "end": 2738,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "456 Care Lane, Brighton MA 02135",
+        "start": 2781,
+        "end": 2813,
+        "placeholder": null
+      }
+    ],
+    "meta": {
+      "source": "annotate_original_notes.py regex + manual review"
+    }
+  }
+}
