@@ -4,12 +4,12 @@
 
 | PHI category | ground truth | recall (typed) | recall (masked at all) |
 |---|---|---|---|
-| PATIENT_NAME | 15 | 1.0 | 1.0 |
+| PATIENT_NAME | 22 | 0.955 | 0.955 |
 | PROVIDER_NAME | 23 | 1.0 | 1.0 |
 | DOB | 10 | 1.0 | 1.0 |
 | DATE | 103 | 0.398 | 0.485 |
 | PHONE | 10 | 1.0 | 1.0 |
-| ADDRESS | 11 | 0.273 | 0.364 |
+| ADDRESS | 14 | 0.357 | 0.429 |
 | MRN | 10 | 1.0 | 1.0 |
 
-**False positives:** 159 total — {"DATE_TIME": 126, "PERSON": 17, "PHONE_NUMBER": 10, "LOCATION": 6}. Overall typed precision: 0.413. Every FP is listed in redaction_false_positives.md.
+**False positives:** 139 total — {"DATE_TIME": 123, "PERSON": 11, "LOCATION": 4, "PHONE_NUMBER": 1}. Overall typed precision: 0.511. Every FP is listed in redaction_false_positives.md.

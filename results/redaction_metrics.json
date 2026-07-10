@@ -8,9 +8,9 @@
     },
     "per_category": {
       "PATIENT_NAME": {
-        "ground_truth_count": 15,
-        "recall_typed": 1.0,
-        "recall_masked_at_all": 1.0
+        "ground_truth_count": 22,
+        "recall_typed": 0.955,
+        "recall_masked_at_all": 0.955
       },
       "PROVIDER_NAME": {
         "ground_truth_count": 23,
@@ -33,9 +33,9 @@
         "recall_masked_at_all": 1.0
       },
       "ADDRESS": {
-        "ground_truth_count": 11,
-        "recall_typed": 0.273,
-        "recall_masked_at_all": 0.364
+        "ground_truth_count": 14,
+        "recall_typed": 0.357,
+        "recall_masked_at_all": 0.429
       },
       "MRN": {
         "ground_truth_count": 10,
@@ -44,14 +44,16 @@
       }
     },
     "overall": {
-      "false_positives_total": 159,
+      "false_positives_total": 139,
       "false_positives_by_predicted_type": {
-        "DATE_TIME": 126,
-        "PERSON": 17,
-        "PHONE_NUMBER": 10,
-        "LOCATION": 6
+        "DATE_TIME": 123,
+        "PERSON": 11,
+        "LOCATION": 4,
+        "PHONE_NUMBER": 1
       },
-      "precision_typed_overall": 0.413
+      "type_mismatched_masks": 12,
+      "predictions_typed_correct": 145,
+      "precision_typed_overall": 0.511
     }
   },
   "details": {
@@ -592,24 +594,6 @@
           "text": "9:00 AM",
           "score": 0.85,
           "context": " Cardiac Rehabilitation - 03/15/2024 at 9:00 AM Phone: (617) 555-0456"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "02/28 0630",
-          "score": 0.4,
-          "context": "no edema, 2+ pulses  Pertinent Results: 02/28 0630: Trop I 0.05  02/28 1200: Trop I 45.2  "
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "02/28 1200",
-          "score": 0.4,
-          "context": "inent Results: 02/28 0630: Trop I 0.05  02/28 1200: Trop I 45.2  03/01 0600: Trop I 12.1 0"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "03/01 0600",
-          "score": 0.4,
-          "context": ": Trop I 0.05  02/28 1200: Trop I 45.2  03/01 0600: Trop I 12.1 02/28: CK 89 -> CK 1250 ->"
         }
       ]
     },
@@ -677,6 +661,24 @@
           "placeholder": null,
           "detected_typed": false,
           "masked_at_all": false
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Carlos",
+          "start": 865,
+          "end": 871,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Maria Garcia",
+          "start": 876,
+          "end": 888,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
         },
         {
           "entity_type": "DATE",
@@ -811,18 +813,6 @@
           "text": "2022",
           "score": 0.85,
           "context": " (2012) 2. Prior DKA episodes x2 (2018, 2022) 3. No diabetic complications  Social H"
-        },
-        {
-          "entity_type": "PERSON",
-          "text": "Carlos",
-          "score": 0.85,
-          "context": ". No tobacco/drugs. Rare ETOH. Parents: Carlos and Maria Garcia.  Physical Exam: ADMIS"
-        },
-        {
-          "entity_type": "PERSON",
-          "text": "Maria Garcia",
-          "score": 0.85,
-          "context": "o/drugs. Rare ETOH. Parents: Carlos and Maria Garcia.  Physical Exam: ADMISSION: VS: 99.2 11"
         },
         {
           "entity_type": "DATE_TIME",
@@ -985,6 +975,15 @@
           "masked_at_all": false
         },
         {
+          "entity_type": "PATIENT_NAME",
+          "text": "Nancy",
+          "start": 2494,
+          "end": 2499,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
           "entity_type": "PROVIDER_NAME",
           "text": "Jennifer Park",
           "start": 2555,
@@ -1101,12 +1100,6 @@
           "context": "ome O2 2L continuous 7. Sertraline 50mg daily  Discharge Disposition: Home  Discharge"
         },
         {
-          "entity_type": "PERSON",
-          "text": "Nancy",
-          "score": 0.85,
-          "context": "urn for worsening SOB, fever - Daughter Nancy to assist with medications  Followup In"
-        },
-        {
           "entity_type": "DATE_TIME",
           "text": "1:30 PM",
           "score": 0.85,
@@ -1117,12 +1110,6 @@
           "text": "9:00 AM",
           "score": 0.85,
           "context": "ulmonary Rehabilitation - 05/03/2024 at 9:00 AM Phone: (617) 555-0987"
-        },
-        {
-          "entity_type": "DATE_TIME",
-          "text": "555-0987",
-          "score": 0.85,
-          "context": "on - 05/03/2024 at 9:00 AM Phone: (617) 555-0987"
         }
       ]
     },
@@ -1273,6 +1260,15 @@
           "masked_at_all": false
         },
         {
+          "entity_type": "PATIENT_NAME",
+          "text": "Helen",
+          "start": 2572,
+          "end": 2577,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
           "entity_type": "PROVIDER_NAME",
           "text": "Mark Sullivan",
           "start": 2630,
@@ -1374,28 +1370,10 @@
           "context": "Discharge Instructions: - Clear liquids today, advance diet as tolerated - Complete a"
         },
         {
-          "entity_type": "PERSON",
-          "text": "Helen",
-          "score": 0.85,
-          "context": "rn for fever, abd pain, jaundice - Wife Helen to monitor for symptoms  Followup Instr"
-        },
-        {
           "entity_type": "DATE_TIME",
           "text": "11:15 AM",
           "score": 0.85,
           "context": "Mark Sullivan (Surgery) - 05/22/2024 at 11:15 AM Phone: (617) 555-1234"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "05/08 1800",
-          "score": 0.4,
-          "context": "mild RUQ tenderness  Pertinent Results: 05/08 1800: T bili 8.5 D bili 6.2 ALT 285 AST 195 "
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "05/11 0600",
-          "score": 0.4,
-          "context": "D bili 6.2 ALT 285 AST 195 Alk phos 445 05/11 0600: T bili 2.1 D bili 1.4 ALT 89 AST 72 Al"
         }
       ]
     },
@@ -1454,6 +1432,15 @@
           "placeholder": null,
           "detected_typed": true,
           "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "Sunset Manor Assisted Living",
+          "start": 556,
+          "end": 584,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
         },
         {
           "entity_type": "ADDRESS",
@@ -1570,12 +1557,6 @@
         },
         {
           "entity_type": "DATE_TIME",
-          "text": "02446",
-          "score": 0.85,
-          "context": "ed Living, 890 Oak Avenue, Brookline MA 02446.  Past Medical History: 1. CKD stage 3 "
-        },
-        {
-          "entity_type": "DATE_TIME",
           "text": "2021\n3",
           "score": 0.85,
           "context": "e 3 (baseline Cr 1.4) 2. CHF EF 35%, dx 2021 3. DM2, dx 2015 4. HTN, dx 2008  Social H"
@@ -1675,18 +1656,6 @@
           "text": "2:30 PM",
           "score": 0.85,
           "context": "vin Murphy (Cardiology) - 06/20/2024 at 2:30 PM Phone: (617) 555-2468"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "06/05 0600",
-          "score": 0.4,
-          "context": " edema bilateral LE  Pertinent Results: 06/05 0600: Cr 3.2 BUN 85 K 5.8  06/08 0600: Cr 1."
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "06/08 0600",
-          "score": 0.4,
-          "context": "sults: 06/05 0600: Cr 3.2 BUN 85 K 5.8  06/08 0600: Cr 1.8 BUN 45 K 4.2 06/06: Echo: EF 35"
         }
       ]
     },
@@ -1754,6 +1723,15 @@
           "placeholder": null,
           "detected_typed": false,
           "masked_at_all": false
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Rosa Martinez",
+          "start": 820,
+          "end": 833,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
         },
         {
           "entity_type": "DATE",
@@ -1885,12 +1863,6 @@
           "text": "2018",
           "score": 0.85,
           "context": " dx 2020   3. Obesity BMI 38 4. HTN, dx 2018  Social History: Works construction for"
-        },
-        {
-          "entity_type": "PERSON",
-          "text": "Rosa Martinez",
-          "score": 0.85,
-          "context": "struction. Smoker 1ppd x20y. Married to Rosa Martinez, has 2 teenage children. Drinks beer on"
         },
         {
           "entity_type": "DATE_TIME",
@@ -2122,12 +2094,6 @@
         },
         {
           "entity_type": "DATE_TIME",
-          "text": "02155",
-          "score": 0.85,
-          "context": " Lives at 258 Highland Road, Medford MA 02155 with wife Janet Davis. Social ETOH (2-3"
-        },
-        {
-          "entity_type": "DATE_TIME",
           "text": "98 18",
           "score": 0.85,
           "context": "ysical Exam: ADMISSION: VS: 98.8 110/65 98 18 98%RA Gen: pale, fatigued but alert HEE"
@@ -2179,18 +2145,6 @@
           "text": "11:00 AM",
           "score": 0.85,
           "context": "4 at 2:15 PM Repeat EGD - 10/18/2024 at 11:00 AM Phone: (617) 555-4680"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "08/22 1800",
-          "score": 0.4,
-          "context": "al: guaiac negative  Pertinent Results: 08/22 1800: Hgb 7.8 Hct 24% Plt 245 08/24 0600: Hg"
-        },
-        {
-          "entity_type": "PHONE_NUMBER",
-          "text": "08/24 0600",
-          "score": 0.4,
-          "context": "ts: 08/22 1800: Hgb 7.8 Hct 24% Plt 245 08/24 0600: Hgb 10.2 Hct 31% (post-2u PRBC) 08/22:"
         }
       ]
     },
@@ -2530,6 +2484,15 @@
           "masked_at_all": false
         },
         {
+          "entity_type": "PATIENT_NAME",
+          "text": "Karen Wilson",
+          "start": 884,
+          "end": 896,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
           "entity_type": "DATE",
           "text": "10/03",
           "start": 1340,
@@ -2566,6 +2529,24 @@
           "masked_at_all": false
         },
         {
+          "entity_type": "ADDRESS",
+          "text": "Sunshine Manor",
+          "start": 2105,
+          "end": 2119,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "PATIENT_NAME",
+          "text": "Karen",
+          "start": 2568,
+          "end": 2573,
+          "placeholder": null,
+          "detected_typed": false,
+          "masked_at_all": false
+        },
+        {
           "entity_type": "PROVIDER_NAME",
           "text": "Michael Johnson",
           "start": 2621,
@@ -2588,6 +2569,15 @@
           "text": "(617) 555-9012",
           "start": 2724,
           "end": 2738,
+          "placeholder": null,
+          "detected_typed": true,
+          "masked_at_all": true
+        },
+        {
+          "entity_type": "ADDRESS",
+          "text": "Sunshine Manor",
+          "start": 2765,
+          "end": 2779,
           "placeholder": null,
           "detected_typed": true,
           "masked_at_all": true
@@ -2628,12 +2618,6 @@
           "context": "2 in past year  Social History: Widowed 2020, lives alone in single-family home. Dau"
         },
         {
-          "entity_type": "PERSON",
-          "text": "Karen Wilson",
-          "score": 0.85,
-          "context": "s alone in single-family home. Daughter Karen Wilson lives 2 miles away, visits daily. No to"
-        },
-        {
           "entity_type": "DATE_TIME",
           "text": "daily",
           "score": 0.85,
@@ -2664,12 +2648,6 @@
           "context": "min D3 2000u PO daily 6. Amlodipine 5mg daily  Discharge Disposition: Skilled nursing"
         },
         {
-          "entity_type": "LOCATION",
-          "text": "Sunshine Manor",
-          "score": 0.85,
-          "context": " Disposition: Skilled nursing facility (Sunshine Manor)  Discharge Diagnosis: Primary: R femor"
-        },
-        {
           "entity_type": "PERSON",
           "text": "walker\n- PT",
           "score": 0.85,
@@ -2698,12 +2676,6 @@
           "text": "SNF",
           "score": 0.85,
           "context": " 9:30 AM Physical Therapy evaluation at SNF Phone: (617) 555-9012 Skilled Nursing F"
-        },
-        {
-          "entity_type": "LOCATION",
-          "text": "Sunshine Manor",
-          "score": 0.85,
-          "context": "617) 555-9012 Skilled Nursing Facility: Sunshine Manor, 456 Care Lane, Brighton MA 02135"
         }
       ]
     }

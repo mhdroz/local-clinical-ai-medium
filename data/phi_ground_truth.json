@@ -359,6 +359,20 @@
         "placeholder": null
       },
       {
+        "entity_type": "PATIENT_NAME",
+        "text": "Carlos",
+        "start": 865,
+        "end": 871,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Maria Garcia",
+        "start": 876,
+        "end": 888,
+        "placeholder": null
+      },
+      {
         "entity_type": "DATE",
         "text": "01/20",
         "start": 1169,
@@ -520,6 +534,13 @@
         "placeholder": null
       },
       {
+        "entity_type": "PATIENT_NAME",
+        "text": "Nancy",
+        "start": 2494,
+        "end": 2499,
+        "placeholder": null
+      },
+      {
         "entity_type": "PROVIDER_NAME",
         "text": "Jennifer Park",
         "start": 2555,
@@ -667,6 +688,13 @@
         "placeholder": null
       },
       {
+        "entity_type": "PATIENT_NAME",
+        "text": "Helen",
+        "start": 2572,
+        "end": 2577,
+        "placeholder": null
+      },
+      {
         "entity_type": "PROVIDER_NAME",
         "text": "Mark Sullivan",
         "start": 2630,
@@ -734,6 +762,13 @@
         "text": "David Wong",
         "start": 204,
         "end": 214,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "Sunset Manor Assisted Living",
+        "start": 556,
+        "end": 584,
         "placeholder": null
       },
       {
@@ -867,6 +902,13 @@
         "text": "147 Beacon Street, Chelsea MA 02150",
         "start": 573,
         "end": 608,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Rosa Martinez",
+        "start": 820,
+        "end": 833,
         "placeholder": null
       },
       {
@@ -1283,6 +1325,13 @@
         "placeholder": null
       },
       {
+        "entity_type": "PATIENT_NAME",
+        "text": "Karen Wilson",
+        "start": 884,
+        "end": 896,
+        "placeholder": null
+      },
+      {
         "entity_type": "DATE",
         "text": "10/03",
         "start": 1340,
@@ -1311,6 +1360,20 @@
         "placeholder": null
       },
       {
+        "entity_type": "ADDRESS",
+        "text": "Sunshine Manor",
+        "start": 2105,
+        "end": 2119,
+        "placeholder": null
+      },
+      {
+        "entity_type": "PATIENT_NAME",
+        "text": "Karen",
+        "start": 2568,
+        "end": 2573,
+        "placeholder": null
+      },
+      {
         "entity_type": "PROVIDER_NAME",
         "text": "Michael Johnson",
         "start": 2621,
@@ -1329,6 +1392,13 @@
         "text": "(617) 555-9012",
         "start": 2724,
         "end": 2738,
+        "placeholder": null
+      },
+      {
+        "entity_type": "ADDRESS",
+        "text": "Sunshine Manor",
+        "start": 2765,
+        "end": 2779,
         "placeholder": null
       },
       {

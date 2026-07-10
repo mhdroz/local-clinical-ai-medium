@@ -38,9 +38,13 @@ PATTERNS = [
     (
         "PATIENT_NAME",
         re.compile(
-            r"\b(?:wife|husband|daughter|son|mother|father|sister|brother)\s+(" + NAME + r")"
+            r"\b(?i:wife|husband|daughter|son|mother|father|sister|brother)\s+(" + NAME + r")"
         ),
     ),
+    ("PATIENT_NAME", re.compile(r"\bMarried to\s+(" + NAME + r")")),
+    # "Parents: Carlos and Maria Garcia" — one pattern per name
+    ("PATIENT_NAME", re.compile(r"\bParents?:\s*([A-Z][a-zà-ÿ]+)\s+and\b")),
+    ("PATIENT_NAME", re.compile(r"\bParents?:\s*[A-Z][a-zà-ÿ]+\s+and\s+(" + NAME + r")")),
     ("PATIENT_NAME", re.compile(HONORIFIC + r"\s(" + NAME + r")")),
     ("PHONE", re.compile(r"(\(\d{3}\)\s?\d{3}-\d{4}|\d{3}-\d{3}-\d{4}|\d{3}\.\d{3}\.\d{4})")),
     # addresses: "123 Oak Street, Boston MA 02114" (zip optional)
@@ -80,12 +84,35 @@ def _valid_md(val, text, start, end):
 # provider "Dr. X" before honorific person)
 
 
-def annotate_note(text):
+# PHI found during manual review that no reasonable regex catches — mostly
+# named residential facilities. note_id -> [(entity_type, exact_text), ...];
+# every listed occurrence of the text is annotated.
+MANUAL_ENTITIES = {
+    "6": [("ADDRESS", "Sunset Manor Assisted Living")],
+    "10": [("ADDRESS", "Sunshine Manor")],
+}
+
+
+def annotate_note(text, manual=()):
     entities = []
     taken = []
 
     def free(s, e):
         return all(e <= a or s >= b for a, b in taken)
+
+    for etype, needle in manual:
+        start = 0
+        while True:
+            s = text.find(needle, start)
+            if s == -1:
+                break
+            e = s + len(needle)
+            if free(s, e):
+                taken.append((s, e))
+                entities.append(
+                    {"entity_type": etype, "text": needle, "start": s, "end": e, "placeholder": None}
+                )
+            start = e
 
     for etype, rx in PATTERNS:
         for m in rx.finditer(text):
@@ -124,7 +151,7 @@ def main():
     for _, row in df.iterrows():
         note_id = str(int(row["noteid"]))
         text = row["note_text"]
-        entities = annotate_note(text)
+        entities = annotate_note(text, manual=MANUAL_ENTITIES.get(note_id, ()))
         for e in entities:
             assert text[e["start"] : e["end"]] == e["text"], (note_id, e)
         ground_truth[note_id] = {

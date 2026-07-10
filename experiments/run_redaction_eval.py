@@ -68,24 +68,35 @@ def evaluate_note(analyzer, note_text, gt_entities, policy=None):
         per_gt.append({**gt, "detected_typed": typed, "masked_at_all": any_mask})
 
     false_positives = []
+    type_mismatches = 0
+    typed_preds = 0
     for p in preds:
-        hit = any(
+        hit_typed = any(
             p.entity_type in COMPAT[gt["entity_type"]]
             and overlaps(p.start, p.end, gt["start"], gt["end"])
             for gt in gt_entities
         )
-        if not hit:
-            ctx_lo = max(0, p.start - 40)
-            ctx_hi = min(len(note_text), p.end + 40)
-            false_positives.append(
-                {
-                    "entity_type": p.entity_type,
-                    "text": note_text[p.start : p.end],
-                    "score": round(p.score, 3),
-                    "context": note_text[ctx_lo:ctx_hi].replace("\n", " "),
-                }
-            )
-    return per_gt, false_positives
+        hit_any = any(overlaps(p.start, p.end, gt["start"], gt["end"]) for gt in gt_entities)
+        if hit_typed:
+            typed_preds += 1
+            continue
+        if hit_any:
+            # masked real PHI under the wrong label ("02/28 0630" as
+            # PHONE_NUMBER) — wrong taxonomy, right privacy outcome; counted
+            # separately, not as a false positive
+            type_mismatches += 1
+            continue
+        ctx_lo = max(0, p.start - 40)
+        ctx_hi = min(len(note_text), p.end + 40)
+        false_positives.append(
+            {
+                "entity_type": p.entity_type,
+                "text": note_text[p.start : p.end],
+                "score": round(p.score, 3),
+                "context": note_text[ctx_lo:ctx_hi].replace("\n", " "),
+            }
+        )
+    return per_gt, false_positives, type_mismatches, typed_preds
 
 
 def load_notes_map(paths):
@@ -158,6 +169,8 @@ def main():
     stats = {c: {"n": 0, "typed": 0, "any": 0} for c in CATEGORIES}
     fp_by_type = defaultdict(list)
     n_notes = 0
+    n_mismatch = 0
+    n_typed_preds = 0
     all_details = {}
 
     for note_id, gt in ground_truth.items():
@@ -167,7 +180,11 @@ def main():
             print(f"warning: note {note_id} has ground truth but no note text — skipped")
             continue
         n_notes += 1
-        per_gt, fps = evaluate_note(analyzer, notes[note_id], gt["entities"], policy)
+        per_gt, fps, mismatches, typed_preds = evaluate_note(
+            analyzer, notes[note_id], gt["entities"], policy
+        )
+        n_mismatch += mismatches
+        n_typed_preds += typed_preds
         for g in per_gt:
             s = stats[g["entity_type"]]
             s["n"] += 1
@@ -178,7 +195,6 @@ def main():
         all_details[note_id] = {"entities": per_gt, "false_positives": fps}
 
     n_fp = sum(len(v) for v in fp_by_type.values())
-    n_pred_tp = sum(s["typed"] for s in stats.values())
 
     summary = {
         "config": {
@@ -201,8 +217,12 @@ def main():
     summary["overall"] = {
         "false_positives_total": n_fp,
         "false_positives_by_predicted_type": fp_counts,
-        "precision_typed_overall": round(n_pred_tp / (n_pred_tp + n_fp), 3)
-        if (n_pred_tp + n_fp)
+        "type_mismatched_masks": n_mismatch,
+        "predictions_typed_correct": n_typed_preds,
+        # precision over predictions: typed-correct / (typed-correct + true FPs);
+        # type-mismatched masks are excluded from both sides (see module docstring)
+        "precision_typed_overall": round(n_typed_preds / (n_typed_preds + n_fp), 3)
+        if (n_typed_preds + n_fp)
         else None,
     }
 
