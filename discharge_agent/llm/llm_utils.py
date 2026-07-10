@@ -9,7 +9,6 @@ class LLMProvider(Enum):
     LOCAL = "local"
     OPENAI = "openai"
     ANTHROPIC = "anthropic"
-    MOONSHOT = "moonshot"
 
 
 class MedicalDataExtractor:
@@ -32,12 +31,6 @@ class MedicalDataExtractor:
             self.client = anthropic.Anthropic(api_key=self.config.get("api_key"))
             self.model = self.config.get("model", "claude-3-5-sonnet-20241022")
 
-        elif self.provider == LLMProvider.MOONSHOT:
-            self.client = openai.OpenAI(
-                api_key=self.config.get("api_key"), base_url=self.config.get("base_url")
-            )
-            self.model = self.config.get("model", "kimi-k2-turbo-preview")
-
     def extract_clinical_information(self, note: str, temperature: float = 0.1) -> str:
         """Extract clinical information using the configured provider"""
         system_prompt = self._get_system_prompt()
@@ -49,9 +42,6 @@ class MedicalDataExtractor:
             return self._extract_openai(system_prompt, user_prompt, temperature)
         elif self.provider == LLMProvider.ANTHROPIC:
             return self._extract_anthropic(system_prompt, user_prompt, temperature)
-        elif self.provider == LLMProvider.MOONSHOT:
-            print(self.client.base_url)
-            return self._extract_openai(system_prompt, user_prompt, temperature)
 
     def _extract_local(
         self, system_prompt: str, user_prompt: str, temperature: float
