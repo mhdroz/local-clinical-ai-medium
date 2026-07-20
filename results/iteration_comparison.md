@@ -1,6 +1,6 @@
 # Redaction fix iteration: baseline vs policy v2
 
-Notes evaluated: 10 (baseline) / 10 (v2). Matching: char-overlap; typed = compatible entity type, any = any type.
+Notes evaluated: 40 (baseline) / 40 (v2). Matching: char-overlap; typed = compatible entity type, any = any type.
 
 Policy v2 = clinical-eponym allowlist + benign-date filters (ages, durations,
 frequencies, clock times, pain/strength scores) + structural recognizers
@@ -8,19 +8,19 @@ frequencies, clock times, pain/strength scores) + structural recognizers
 
 | PHI category | GT count | recall (typed) base → v2 | recall (masked at all) base → v2 |
 |---|---|---|---|
-| PATIENT_NAME | 22 | 0.955 → **0.955** | 0.955 → **0.955** |
-| PROVIDER_NAME | 23 | 1.000 → **1.000** | 1.000 → **1.000** |
-| DOB | 10 | 1.000 → **1.000** | 1.000 → **1.000** |
-| DATE | 103 | 0.398 → **1.000** | 0.485 → **1.000** |
-| PHONE | 10 | 1.000 → **1.000** | 1.000 → **1.000** |
-| ADDRESS | 14 | 0.357 → **0.357** | 0.429 → **0.429** |
-| MRN | 10 | 1.000 → **1.000** | 1.000 → **1.000** |
+| PATIENT_NAME | 76 | 0.842 → **0.987** | 0.895 → **0.987** |
+| PROVIDER_NAME | 117 | 0.974 → **0.974** | 0.974 → **0.974** |
+| DOB | 40 | 0.900 → **1.000** | 0.900 → **1.000** |
+| DATE | 389 | 0.787 → **1.000** | 0.810 → **1.000** |
+| PHONE | 46 | 1.000 → **1.000** | 1.000 → **1.000** |
+| ADDRESS | 44 | 0.795 → **0.795** | 0.818 → **0.818** |
+| MRN | 40 | 1.000 → **1.000** | 1.000 → **1.000** |
 
 | overall | baseline | policy v2 |
 |---|---|---|
-| false positives | 139 | **41** |
-| precision (typed) | 0.511 | **0.835** |
-| type-mismatched masks | 12 | 12 |
+| false positives | 376 | **104** |
+| precision (typed) | 0.648 | **0.884** |
+| type-mismatched masks | 56 | 56 |
 
 Notes:
 - The DATE recall jump comes almost entirely from the bare-`m/d` structural

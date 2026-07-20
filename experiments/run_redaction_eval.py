@@ -23,6 +23,7 @@ Matching rule (stated because it materially changes the numbers):
 import argparse
 import json
 import os
+import re
 from collections import defaultdict
 
 import pandas as pd
@@ -123,8 +124,13 @@ def leak_check(trace_dir, ground_truth):
         if not gt:
             continue
         for e in gt["entities"]:
-            # skip very short strings that can appear by chance
-            if len(e["text"]) >= 4 and e["text"] in blob:
+            # skip very short strings that can appear by chance; require word
+            # boundaries so "Apr 2" doesn't match inside a shifted surrogate
+            # like "Apr 23, 2023"
+            if len(e["text"]) < 4:
+                continue
+            pattern = r"(?<![A-Za-z0-9])" + re.escape(e["text"]) + r"(?![A-Za-z0-9])"
+            if re.search(pattern, blob):
                 leaks.append({"file": fname, "entity_type": e["entity_type"], "text": e["text"]})
     return leaks
 

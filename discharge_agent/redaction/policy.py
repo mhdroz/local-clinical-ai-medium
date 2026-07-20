@@ -70,6 +70,22 @@ _HAS_MONTH_DAY = re.compile(
 )
 
 
+def _term_at_word_boundary(window: str, term: str) -> bool:
+    if not window.startswith(term):
+        return False
+    rest = window[len(term) :]
+    return not rest or not rest[0].isalnum()
+
+
+def _match_term_raw(text_from_start: str, term: str):
+    """Match an allowlisted term at the start of the raw detection window,
+    case-insensitively, tolerating whitespace runs. Returns the match end
+    offset in raw chars, or None."""
+    pattern = re.escape(term).replace(r"\ ", r"\s+") + r"(?![A-Za-z0-9])"
+    m = re.match(pattern, text_from_start, re.IGNORECASE)
+    return m.end() if m else None
+
+
 @dataclass
 class RedactionPolicy:
     allowlist: set = field(default_factory=lambda: set(CLINICAL_ALLOWLIST))
@@ -85,17 +101,43 @@ class RedactionPolicy:
             if key in self.allowlist:
                 continue
             # Boundary drift: NER often flags just "Parkinson" inside
-            # "Parkinson's disease". Anchor the allowlist term at the
-            # detection start so the DISEASE usage is kept while a PATIENT
-            # named Parkinson ("Parkinson, Lisa", "Mr. Parkinson") is still
-            # masked — the following text disambiguates.
-            window = " ".join(text[r.start : r.end + 24].lower().split())
-            if any(window.startswith(term) for term in self.allowlist):
+            # "Parkinson's disease" (keep the disease term readable) — or
+            # merges a specialty into a name ("Neurology Margaret Bell").
+            # Anchor allowlist terms at the detection start, at a word
+            # boundary ("ed" may not swallow "EDward Wilson"):
+            #   - term covers the whole detection -> drop it entirely
+            #   - term covers a prefix -> TRIM it off and keep masking the
+            #     rest, so "Neurology Margaret Bell" still masks the name.
+            window = text[r.start : r.end + 24]
+            for term in self.allowlist:
+                end = _match_term_raw(window, term)
+                if end is None:
+                    continue
+                if end >= (r.end - r.start):
+                    r = None  # allowlisted term covers the detection
+                    break
+                trimmed_start = r.start + end
+                while trimmed_start < r.end and not text[trimmed_start].isalnum():
+                    trimmed_start += 1
+                if trimmed_start < r.end:
+                    r = type(r)(
+                        entity_type=r.entity_type,
+                        start=trimmed_start,
+                        end=r.end,
+                        score=r.score,
+                    )
+                break
+            if r is None:
                 continue
+            span = text[r.start : r.end].strip()
             if r.entity_type == "DATE_TIME" and any(
                 p.match(span) for p in self.benign_date_patterns
             ):
-                continue
+                # "...in 2 weeks" / "within one month": a duration used as an
+                # appointment time. Keep it masked when the preceding words
+                # say so; bare durations ("x3 days of abx") stay visible.
+                if not re.search(r"(?:\bin|\bwithin)\s+$", text[: r.start], re.IGNORECASE):
+                    continue
             kept.append(r)
         return kept
 

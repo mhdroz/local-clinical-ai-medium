@@ -79,7 +79,19 @@ def md_date_recognizer() -> PatternRecognizer:
                 name="bare_month_day",
                 regex=r"\b(?:0?[1-9]|1[0-2])/(?:[0-2]?[0-9]|3[01])\b(?!/)",
                 score=0.6,
-            )
+            ),
+            # "Jun 11", "June 19, 2024" — spaCy misses short month-name dates
+            Pattern(
+                name="month_name_day",
+                regex=r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:,\s*\d{4})?\b",
+                score=0.6,
+            ),
+            # "4-Dec-2024"
+            Pattern(
+                name="day_month_year",
+                regex=r"\b\d{1,2}-(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*-\d{4}\b",
+                score=0.6,
+            ),
         ],
     )
 

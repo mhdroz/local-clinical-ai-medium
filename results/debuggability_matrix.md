@@ -3,8 +3,9 @@
 Setup: all tasks attempted using ONLY the exported redacted traces
 (`results/traces/` = redaction on, placeholder policy v1; `results/traces_v2/`
 = policy v2 with date-shift surrogates) via `python -m experiments.run_debuggability`
-and the Langfuse UI. No source notes were consulted. Model: gpt-oss:20b, 10
-synthetic notes. Grades: PASS / DEGRADED / FAIL.
+and the Langfuse UI. No source notes were consulted. Model: gpt-oss:20b;
+task specimens drawn from the original notes, leak counts from the full
+40-note dataset. Grades: PASS / DEGRADED / FAIL.
 
 | # | Task | v1 (placeholders) | v2 (policy + surrogates) |
 |---|---|---|---|
@@ -76,13 +77,22 @@ calls. Diagnosing this required only call shapes, not PHI.
 
 ## Leak reality check (plumbing vs. detection)
 
-Grepping every ground-truth PHI string against the exported redacted traces:
-- v1: **73 leaks** across 10 traces — 62 dates (bare `m/d` lab dates spaCy
-  never detects), 8 addresses, 2 patient names (incl. one full header name,
-  `BROWN, DOROTHY MAE`, missed outright by NER), 1 provider name.
-- v2: **2 leaks** across the re-run notes — both street addresses/facility
-  names, the one category the fix iteration deliberately did not address.
+Boundary-aware grep of every ground-truth PHI string against the exported
+redacted traces, full 40-note dataset:
+- v1 (placeholders): **135 leaks** — 98 dates (bare `m/d` and month-name
+  forms spaCy never detects), 13 provider names, 11 addresses, 9 patient
+  names (incl. full all-caps header names with eponym surnames:
+  `CROHN, DOROTHY`, `BELL, DAVID`, `HODGKIN, LISA`), 4 DOBs.
+- v2 (policy + structural recognizers): **17 leaks** — zero dates,
+  8 addresses/facility names (the category the fix iteration deliberately
+  did not address), 8 provider names, 1 bare first name. Half the provider
+  leaks were detected correctly in the raw note but leaked from
+  LLM-transformed payloads (extraction JSON, model reasoning) — NER has to
+  re-detect the same string in every payload shape; the rest are the
+  `Firstname Eponym, NP` pattern with no "Dr." cue.
 
 The masking *pipeline* (Langfuse `mask` callback → exporter) leaked nothing
 that the analyzer detected; every leak is a detection miss, not a plumbing
-failure.
+failure. (The leak checker itself needed word-boundary matching — substring
+grep matched "Apr 2" inside the shifted surrogate "Apr 23, 2023" and
+reported phantom leaks.)
