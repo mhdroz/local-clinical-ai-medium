@@ -9,6 +9,7 @@ This repository builds on my blog posts:
 -  [I Built a Local Clinical AI Agent from Scratch - Here's How](https://medium.com/towards-artificial-intelligence/i-built-a-local-clinical-ai-agent-from-scratch-heres-how-90783c59afdc)
 -  [Do AI Agents Really Use the Tools You Build for Them? I Tested It.](https://medium.com/towards-artificial-intelligence/i-built-a-clinical-ai-agent-and-it-skipped-the-tools-i-gave-it-d9d7c3d25051)
 -  [Can Local AI Keep Up with the Cloud? I Tested 8 Models on Clinical Data](https://medium.com/towards-artificial-intelligence/can-local-ai-keep-up-with-the-cloud-i-tested-8-models-on-clinical-data-739e23b71a65)
+-   - [My Clinical AI Agent’s Debug Logs Were a PHI Database. Here’s How I (Mostly) Fixed It.](https://pub.towardsai.net/my-clinical-ai-agents-debug-logs-were-a-phi-database-here-s-how-i-mostly-fixed-it-4326abd3f5e4)
 
 It contains:
 
