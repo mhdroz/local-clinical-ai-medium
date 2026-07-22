@@ -20,22 +20,59 @@ It contains:
 3. End-to-end workflow → from text note ➝ structured JSON ➝ readiness decision
 4. Tool use evaluation framework
 5. Simple benchmark framework to compare the extraction quality between various LLMs
+6. Agent observability: self-hosted Langfuse tracing with in-process PHI redaction
+   (Presidio), plus a redaction-quality / debuggability experiment suite
 
 All notes are synthetic, no real patient data.
 
 ## Contents
 
 - `data/synthetic_notes.csv` — 10 synthetic discharge summaries
+- `data/phi_ground_truth.json` — exact PHI spans per note (redaction eval ground truth)
 - `discharge_agent/extractions` - code and prompts for information extraction from raw notes
 - `discharge_agent/llm` — prompt templates and tools specs
-- `discharge_agent/pieplines` - orchestration code
+- `discharge_agent/pipelines` - agent loop (tool-calling orchestration)
+- `discharge_agent/pipeline.py` + `discharge_agent/run.py` - end-to-end pipeline module and CLI
+- `discharge_agent/tracing` - Langfuse instrumentation (generation/tool/agent spans)
+- `discharge_agent/redaction` - Presidio masking layer wired into the Langfuse `mask` callback
 - `discharge_agent/tools` - labs, date reasoning, UMLS normalization
 - `discharge_agent/evaluation` - benchmark code
+- `experiments/` - tracing + redaction experiment scripts (see `results/EXPERIMENT_SUMMARY.md`)
+- `docker/langfuse/` - self-hosted Langfuse v3 compose (localhost-only)
 - `discharge_agent_example.ipynb` - end to end example
 - `extraction_benchmark.ipynb` - end to end benchmark
+- `tracing_redaction_demo.ipynb` - tracing + redaction demo
 
 ## Quickstart
 use the `.env_template` to create your own `.env` with your UMLS API key or leave it empty to use the provided demo mappings
+
+## Tracing + PHI redaction (post #5)
+
+Everything runs locally: Ollama serves the model, Langfuse (self-hosted in
+Docker) stores traces, and PHI is masked **in-process** before any span leaves
+the agent — the model sees the full note, the telemetry never does.
+
+```bash
+# 1. Langfuse (first boot provisions org/project/API keys headlessly)
+cd docker/langfuse && cp .env.example .env   # edit secrets
+docker compose up -d                          # UI at http://127.0.0.1:3000
+
+# 2. Python deps
+pip install -r requirements.txt
+python -m spacy download en_core_web_lg
+
+# 3. copy LANGFUSE_* keys into the repo-root .env (see .env_template), then:
+python -m discharge_agent.run --note-id 1 --redaction on
+python -m discharge_agent.run --note-id 1 --redaction off   # A/B the same note
+
+# experiments (redaction quality, debuggability, fix iteration)
+python -m experiments.run_all_notes --redaction on
+python -m experiments.run_redaction_eval
+python -m experiments.run_redaction_eval --policy v2
+python -m experiments.run_iteration_comparison
+```
+
+Results and the honest findings live in `results/EXPERIMENT_SUMMARY.md`.
 
 ## Synthetic Clinical Notes
 

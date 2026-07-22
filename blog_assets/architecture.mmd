@@ -1,0 +1,21 @@
+%% Architecture: local discharge agent with traced, in-process-redacted telemetry.
+%% Everything runs on one machine; the dashed boundary is the agent process —
+%% PHI only crosses it after the mask callback has run.
+flowchart LR
+    subgraph host["Mac (everything local)"]
+        subgraph proc["agent process (python -m discharge_agent.run)"]
+            note["synthetic note<br/>(full PHI)"] --> pipe["pipeline.run_note<br/>extraction → agent loop"]
+            pipe -->|"chat_fn"| gen["traced_chat<br/>(generation span)"]
+            pipe -->|"tool_runner"| tool["traced_tool_runner<br/>(tool span)"]
+            gen --> sdk["Langfuse SDK"]
+            tool --> sdk
+            sdk --> mask["mask callback<br/>Presidio TraceMasker<br/>+ RedactionPolicy v2"]
+            mask -->|"masked payloads only"| exporter["OTel exporter"]
+        end
+        gen <-->|"raw note, raw PHI"| ollama["Ollama<br/>gpt-oss:20b<br/>:11434"]
+        tool <--> tools["flag_labs · followup_gap<br/>umls_normalize"]
+        exporter -->|"127.0.0.1:3000"| lf["Langfuse v3<br/>(Docker: web, worker,<br/>Postgres, ClickHouse,<br/>Redis, MinIO)"]
+    end
+    lf --> ui["trace UI /<br/>API export"]
+    style mask fill:#f9e0e0,stroke:#c66
+    style lf fill:#e0ecf9,stroke:#69c
